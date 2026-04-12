@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import styles from './ClinicSlider.module.css';
 
 const images = [
+  '/clinic-photos/IMG_5710.jpg',
   '/clinic-photos/IMG_5700.jpg',
   '/clinic-photos/IMG_5701.PNG',
   '/clinic-photos/IMG_5702.PNG',
@@ -12,7 +13,6 @@ const images = [
   '/clinic-photos/IMG_5707.PNG',
   '/clinic-photos/IMG_5708.PNG',
   '/clinic-photos/IMG_5709.PNG',
-  '/clinic-photos/IMG_5710.jpg',
 ];
 
 export default function ClinicSlider() {
