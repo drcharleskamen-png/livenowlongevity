@@ -127,7 +127,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-03-15',
  relatedServices: ['weight-management', 'peptide-therapy'],
- relatedPosts: ['tissue repair peptide protocols-research', 'longevity-labs-guide'],
+ relatedPosts: ['dual-action weight medication-vs-weight management medication', 'weight management medication-side-effects-management', 'muscle-preservation-weight-loss', 'nutrition-glp1-therapy'],
  content: [
  {
  type: 'intro',
@@ -223,7 +223,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-02-28',
  relatedServices: ['nad-therapy', 'longevity-medicine', 'iv-therapy'],
- relatedPosts: ['longevity-labs-guide', 'telemedicine-peptide-therapy'],
+ relatedPosts: ['mitochondrial-dysfunction-aging', 'autophagy-cellular-cleanup', 'longevity-labs-guide', 'insulin-sensitivity-longevity'],
  content: [
  {
  type: 'intro',
@@ -308,7 +308,7 @@ const posts: Record<string, Post> = {
  readTime: '6 min read',
  date: '2026-02-10',
  relatedServices: ['peptide-therapy'],
- relatedPosts: ['peptide-legality-nevada', 'tissue repair peptide protocols-research'],
+ relatedPosts: ['peptide-legality-nevada', 'longevity-labs-guide', 'growth hormone-releasing peptide protocols-vs-growth hormone secretagogue protocols', 'custom-iv-protocols'],
  content: [
  {
  type: 'intro',
@@ -385,7 +385,7 @@ const posts: Record<string, Post> = {
  readTime: '10 min read',
  date: '2026-01-25',
  relatedServices: ['longevity-medicine'],
- relatedPosts: ['nad-and-aging', 'telemedicine-peptide-therapy'],
+ relatedPosts: ['biomarkers-adults-guide', 'hs-crp-chronic-inflammation', 'hba1c-metabolic-health', 'telomere-length-aging'],
  content: [
  {
  type: 'intro',
@@ -476,7 +476,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-01-12',
  relatedServices: ['peptide-therapy'],
- relatedPosts: ['telemedicine-peptide-therapy', 'tissue repair peptide protocols-research'],
+ relatedPosts: ['telemedicine-peptide-therapy', 'peptide-injection-guide', 'longevity-labs-guide', 'peptide-therapy-joint-health'],
  content: [
  {
  type: 'intro',
@@ -563,7 +563,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-03-20',
  relatedServices: ['weight-management', 'peptide-therapy'],
- relatedPosts: ['weight management medication-vs-peptides', 'weight management medication-side-effects-management', 'nutrition-glp1-therapy'],
+ relatedPosts: ['weight management medication-vs-peptides', 'weight management medication-side-effects-management', 'nutrition-glp1-therapy', 'glp1-maintenance-after-weight-loss'],
  content: [
  {
  type: 'intro',
@@ -660,7 +660,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-03-10',
  relatedServices: ['weight-management', 'peptide-therapy'],
- relatedPosts: ['dual-action weight medication-vs-weight management medication', 'nutrition-glp1-therapy', 'glp1-maintenance-after-weight-loss'],
+ relatedPosts: ['dual-action weight medication-vs-weight management medication', 'glp1-maintenance-after-weight-loss', 'nutrition-glp1-therapy', 'cortisol-weight-loss-resistance'],
  content: [
  {
  type: 'intro',
@@ -761,7 +761,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-03-05',
  relatedServices: ['weight-management', 'iv-therapy'],
- relatedPosts: ['weight management medication-side-effects-management', 'glp1-maintenance-after-weight-loss', 'thyroid-metabolism-weight'],
+ relatedPosts: ['glp1-maintenance-after-weight-loss', 'weight management medication-vs-peptides', 'muscle-preservation-weight-loss', 'metabolic-adaptation-weight-loss'],
  content: [
  {
  type: 'intro',
@@ -875,7 +875,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-02-25',
  relatedServices: ['weight-management', 'longevity-medicine'],
- relatedPosts: ['nutrition-glp1-therapy', 'glp1-maintenance-after-weight-loss', 'exercise-longevity-research'],
+ relatedPosts: ['glp1-maintenance-after-weight-loss', 'weight management medication-side-effects-management', 'exercise-longevity-research', 'hormone-panels-longevity'],
  content: [
  {
  type: 'intro',
@@ -981,7 +981,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-02-20',
  relatedServices: ['weight-management', 'longevity-medicine'],
- relatedPosts: ['muscle-preservation-weight-loss', 'glp1-maintenance-after-weight-loss', 'cortisol-weight-loss-resistance'],
+ relatedPosts: ['leptin-resistance-weight-loss', 'sleep-weight-loss-metabolism', 'thyroid-metabolism-weight', 'insulin-sensitivity-longevity'],
  content: [
  {
  type: 'intro',
@@ -1090,7 +1090,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-02-15',
  relatedServices: ['weight-management', 'longevity-medicine'],
- relatedPosts: ['metabolic-adaptation-weight-loss', 'cortisol-weight-loss-resistance', 'insulin-sensitivity-longevity'],
+ relatedPosts: ['leptin-resistance-weight-loss', 'cortisol-weight-loss-resistance', 'metabolic-adaptation-weight-loss', 'mitochondrial-dysfunction-aging'],
  content: [
  {
  type: 'intro',
@@ -1199,7 +1199,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-02-08',
  relatedServices: ['weight-management', 'longevity-medicine'],
- relatedPosts: ['metabolic-adaptation-weight-loss', 'sleep-weight-loss-metabolism', 'cortisol-weight-loss-resistance'],
+ relatedPosts: ['sleep-weight-loss-metabolism', 'cortisol-weight-loss-resistance', 'metabolic-adaptation-weight-loss', 'hormone-panels-longevity'],
  content: [
  {
  type: 'intro',
@@ -1308,7 +1308,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-02-01',
  relatedServices: ['weight-management', 'peptide-therapy'],
- relatedPosts: ['weight management medication-side-effects-management', 'leptin-resistance-weight-loss', 'metabolic-adaptation-weight-loss'],
+ relatedPosts: ['nutrition-glp1-therapy', 'metabolic-adaptation-weight-loss', 'sleep-weight-loss-metabolism', 'leptin-resistance-weight-loss'],
  content: [
  {
  type: 'intro',
@@ -1416,7 +1416,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-01-28',
  relatedServices: ['weight-management', 'longevity-medicine'],
- relatedPosts: ['leptin-resistance-weight-loss', 'sleep-weight-loss-metabolism', 'metabolic-adaptation-weight-loss'],
+ relatedPosts: ['leptin-resistance-weight-loss', 'sleep-weight-loss-metabolism', 'thyroid-metabolism-weight', 'autophagy-cellular-cleanup'],
  content: [
  {
  type: 'intro',
@@ -1522,7 +1522,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-01-22',
  relatedServices: ['weight-management', 'longevity-medicine'],
- relatedPosts: ['cortisol-weight-loss-resistance', 'metabolic-adaptation-weight-loss', 'hormone-panels-longevity'],
+ relatedPosts: ['cortisol-weight-loss-resistance', 'metabolic-adaptation-weight-loss', 'hormone-panels-longevity', 'insulin-sensitivity-longevity'],
  content: [
  {
  type: 'intro',
@@ -1617,7 +1617,7 @@ const posts: Record<string, Post> = {
  readTime: '9 min read',
  date: '2026-04-01',
  relatedServices: ['longevity-medicine', 'iv-therapy'],
- relatedPosts: ['longevity-labs-guide', 'telomere-length-aging', 'epigenetic-age-testing'],
+ relatedPosts: ['longevity-labs-guide', 'hs-crp-chronic-inflammation', 'hormone-panels-longevity', 'epigenetic-age-testing'],
  content: [
  {
  type: 'intro',
@@ -1732,7 +1732,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-03-25',
  relatedServices: ['longevity-medicine', 'iv-therapy'],
- relatedPosts: ['biomarkers-adults-guide', 'mitochondrial-dysfunction-aging', 'autophagy-cellular-cleanup'],
+ relatedPosts: ['biomarkers-adults-guide', 'hba1c-metabolic-health', 'mitochondrial-dysfunction-aging', 'thyroid-metabolism-weight'],
  content: [
  {
  type: 'intro',
@@ -1847,7 +1847,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-03-18',
  relatedServices: ['longevity-medicine', 'weight-management'],
- relatedPosts: ['biomarkers-adults-guide', 'insulin-sensitivity-longevity', 'metabolic-adaptation-weight-loss'],
+ relatedPosts: ['hs-crp-chronic-inflammation', 'biomarkers-adults-guide', 'insulin-sensitivity-longevity', 'metabolic-adaptation-weight-loss'],
  content: [
  {
  type: 'intro',
@@ -1954,7 +1954,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-03-12',
  relatedServices: ['longevity-medicine', 'peptide-therapy'],
- relatedPosts: ['biomarkers-adults-guide', 'thyroid-metabolism-weight', 'epigenetic-age-testing'],
+ relatedPosts: ['longevity-labs-guide', 'telomere-length-aging', 'thyroid-metabolism-weight', 'growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide'],
  content: [
  {
  type: 'intro',
@@ -2065,7 +2065,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-03-08',
  relatedServices: ['longevity-medicine', 'peptide-therapy'],
- relatedPosts: ['biomarkers-adults-guide', 'epigenetic-age-testing', 'mitochondrial-dysfunction-aging'],
+ relatedPosts: ['epigenetic-age-testing', 'longevity-labs-guide', 'autophagy-cellular-cleanup', 'exercise-longevity-research'],
  content: [
  {
  type: 'intro',
@@ -2179,7 +2179,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-03-02',
  relatedServices: ['longevity-medicine', 'peptide-therapy'],
- relatedPosts: ['mitochondrial-dysfunction-aging', 'telomere-length-aging', 'exercise-longevity-research'],
+ relatedPosts: ['mitochondrial-dysfunction-aging', 'nad-and-aging', 'exercise-longevity-research', 'cortisol-weight-loss-resistance'],
  content: [
  {
  type: 'intro',
@@ -2286,7 +2286,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-02-22',
  relatedServices: ['longevity-medicine', 'iv-therapy'],
- relatedPosts: ['autophagy-cellular-cleanup', 'nad-and-aging', 'insulin-sensitivity-longevity'],
+ relatedPosts: ['nad-and-aging', 'autophagy-cellular-cleanup', 'insulin-sensitivity-longevity', 'glp1-maintenance-after-weight-loss'],
  content: [
  {
  type: 'intro',
@@ -2403,7 +2403,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-02-16',
  relatedServices: ['longevity-medicine', 'weight-management'],
- relatedPosts: ['hba1c-metabolic-health', 'mitochondrial-dysfunction-aging', 'autophagy-cellular-cleanup'],
+ relatedPosts: ['mitochondrial-dysfunction-aging', 'nad-and-aging', 'hormone-panels-longevity', 'hs-crp-chronic-inflammation'],
  content: [
  {
  type: 'intro',
@@ -2520,7 +2520,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-02-10',
  relatedServices: ['longevity-medicine', 'peptide-therapy'],
- relatedPosts: ['telomere-length-aging', 'biomarkers-adults-guide', 'hormone-panels-longevity'],
+ relatedPosts: ['telomere-length-aging', 'longevity-labs-guide', 'hormone-panels-longevity', 'autophagy-cellular-cleanup'],
  content: [
  {
  type: 'intro',
@@ -2629,7 +2629,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-02-05',
  relatedServices: ['longevity-medicine', 'weight-management'],
- relatedPosts: ['muscle-preservation-weight-loss', 'autophagy-cellular-cleanup', 'mitochondrial-dysfunction-aging'],
+ relatedPosts: ['autophagy-cellular-cleanup', 'muscle-preservation-weight-loss', 'mitochondrial-dysfunction-aging', 'sleep-weight-loss-metabolism'],
  content: [
  {
  type: 'intro',
@@ -2744,7 +2744,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-04-02',
  relatedServices: ['peptide-therapy', 'longevity-medicine'],
- relatedPosts: ['growth hormone-releasing peptide protocols-vs-growth hormone secretagogue protocols', 'peptide-injection-guide', 'stacking-peptides-safely'],
+ relatedPosts: ['growth hormone-releasing peptide protocols-vs-growth hormone secretagogue protocols', 'stacking-peptides-safely', 'peptide-injection-guide', 'muscle-preservation-weight-loss'],
  content: [
  {
  type: 'intro',
@@ -2847,7 +2847,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-04-03',
  relatedServices: ['peptide-therapy'],
- relatedPosts: ['growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'reproductive peptide protocols-peptide-therapy', 'peptide-injection-guide'],
+ relatedPosts: ['reproductive peptide protocols-peptide-therapy', 'growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'hormone-panels-longevity', 'peptide-injection-guide'],
  content: [
  {
  type: 'intro',
@@ -2947,7 +2947,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-04-04',
  relatedServices: ['peptide-therapy', 'longevity-medicine'],
- relatedPosts: ['growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'growth hormone-releasing peptide protocols-vs-growth hormone secretagogue protocols', 'tissue-repair-peptides'],
+ relatedPosts: ['growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'lipolytic peptide protocols-fat-loss', 'stacking-peptides-safely', 'longevity-labs-guide'],
  content: [
  {
  type: 'intro',
@@ -3054,7 +3054,7 @@ const posts: Record<string, Post> = {
  readTime: '6 min read',
  date: '2026-04-05',
  relatedServices: ['peptide-therapy', 'weight-management'],
- relatedPosts: ['growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'dual-action weight medication-vs-weight management medication', 'glp1-maintenance-after-weight-loss'],
+ relatedPosts: ['growth hormone-releasing peptide protocols-growth-hormone', 'growth hormone-releasing peptide protocols-vs-growth hormone secretagogue protocols', 'muscle-preservation-weight-loss', 'metabolic-adaptation-weight-loss'],
  content: [
  {
  type: 'intro',
@@ -3154,7 +3154,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-04-06',
  relatedServices: ['peptide-therapy', 'longevity-medicine'],
- relatedPosts: ['growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'growth hormone-releasing peptide protocols-growth-hormone', 'peptide-injection-guide'],
+ relatedPosts: ['growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'stacking-peptides-safely', 'peptide-injection-guide', 'tissue-repair-peptides'],
  content: [
  {
  type: 'intro',
@@ -3255,7 +3255,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-04-07',
  relatedServices: ['peptide-therapy'],
- relatedPosts: ['growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'growth hormone-releasing peptide protocols-vs-growth hormone secretagogue protocols', 'stacking-peptides-safely'],
+ relatedPosts: ['stacking-peptides-safely', 'peptide-legality-nevada', 'growth hormone-releasing peptide protocols-vs-growth hormone secretagogue protocols', 'telemedicine-peptide-therapy'],
  content: [
  {
  type: 'intro',
@@ -3370,7 +3370,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-04-08',
  relatedServices: ['peptide-therapy', 'weight-management'],
- relatedPosts: ['growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'peptide-injection-guide', 'insulin signaling peptide protocols-peptide-response'],
+ relatedPosts: ['peptide-injection-guide', 'growth hormone-releasing peptide protocols-vs-growth hormone secretagogue protocols', 'growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'peptide-legality-nevada'],
  content: [
  {
  type: 'intro',
@@ -3492,7 +3492,7 @@ const posts: Record<string, Post> = {
  readTime: '6 min read',
  date: '2026-04-09',
  relatedServices: ['peptide-therapy', 'weight-management'],
- relatedPosts: ['stacking-peptides-safely', 'growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'glp1-maintenance-after-weight-loss'],
+ relatedPosts: ['peptide-injection-guide', 'stacking-peptides-safely', 'mitochondrial-dysfunction-aging', 'glp1-maintenance-after-weight-loss'],
  content: [
  {
  type: 'intro',
@@ -3593,7 +3593,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-04-10',
  relatedServices: ['peptide-therapy', 'weight-management'],
- relatedPosts: ['dual-action weight medication-vs-weight management medication', 'glp1-maintenance-after-weight-loss', 'stacking-peptides-safely'],
+ relatedPosts: ['dual-action weight medication-vs-weight management medication', 'weight management medication-vs-peptides', 'peptide-injection-guide', 'stacking-peptides-safely'],
  content: [
  {
  type: 'intro',
@@ -3687,7 +3687,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-04-11',
  relatedServices: ['peptide-therapy'],
- relatedPosts: ['melanocortin peptide protocols-peptide-therapy', 'hormone-panels-longevity', 'peptide-injection-guide'],
+ relatedPosts: ['melanocortin peptide protocols-peptide-therapy', 'hormone-panels-longevity', 'growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide', 'telemedicine-peptide-therapy'],
  content: [
  {
  type: 'intro',
@@ -3787,7 +3787,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-04-01',
  relatedServices: ['iv-therapy', 'longevity-medicine'],
- relatedPosts: ['vitamin-d-deficiency-adults', 'iv-therapy-vs-oral-supplements', 'custom-iv-protocols'],
+ relatedPosts: ['iv-therapy-vs-oral-supplements', 'vitamin-d-deficiency-adults', 'zinc-immunity-iv', 'custom-iv-protocols'],
  content: [
  {
  type: 'intro',
@@ -3890,7 +3890,7 @@ const posts: Record<string, Post> = {
  readTime: '6 min read',
  date: '2026-04-02',
  relatedServices: ['iv-therapy', 'longevity-medicine'],
- relatedPosts: ['glutathione-iv-therapy', 'biomarkers-adults-guide', 'hs-crp-chronic-inflammation'],
+ relatedPosts: ['glutathione-iv-therapy', 'b-complex-iv-therapy', 'magnesium-iv-therapy', 'zinc-immunity-iv'],
  content: [
  {
  type: 'intro',
@@ -3994,7 +3994,7 @@ const posts: Record<string, Post> = {
  readTime: '6 min read',
  date: '2026-04-03',
  relatedServices: ['iv-therapy', 'longevity-medicine'],
- relatedPosts: ['glutathione-iv-therapy', 'iv-therapy-vs-oral-supplements', 'magnesium-iv-therapy'],
+ relatedPosts: ['vitamin-d-deficiency-adults', 'magnesium-iv-therapy', 'glutathione-iv-therapy', 'iv-therapy-vs-oral-supplements'],
  content: [
  {
  type: 'intro',
@@ -4108,7 +4108,7 @@ const posts: Record<string, Post> = {
  readTime: '6 min read',
  date: '2026-04-04',
  relatedServices: ['iv-therapy', 'longevity-medicine'],
- relatedPosts: ['glutathione-iv-therapy', 'b-complex-iv-therapy', 'custom-iv-protocols'],
+ relatedPosts: ['custom-iv-protocols', 'glutathione-iv-therapy', 'magnesium-iv-therapy', 'b-complex-iv-therapy'],
  content: [
  {
  type: 'intro',
@@ -4215,7 +4215,7 @@ const posts: Record<string, Post> = {
  readTime: '6 min read',
  date: '2026-04-05',
  relatedServices: ['iv-therapy', 'longevity-medicine'],
- relatedPosts: ['b-complex-iv-therapy', 'iv-therapy-vs-oral-supplements', 'custom-iv-protocols'],
+ relatedPosts: ['b-complex-iv-therapy', 'iv-therapy-vs-oral-supplements', 'zinc-immunity-iv', 'glutathione-iv-therapy'],
  content: [
  {
  type: 'intro',
@@ -4320,7 +4320,7 @@ const posts: Record<string, Post> = {
  readTime: '6 min read',
  date: '2026-04-06',
  relatedServices: ['iv-therapy', 'longevity-medicine'],
- relatedPosts: ['magnesium-iv-therapy', 'glutathione-iv-therapy', 'custom-iv-protocols'],
+ relatedPosts: ['magnesium-iv-therapy', 'iv-therapy-vs-oral-supplements', 'custom-iv-protocols', 'glutathione-iv-therapy'],
  content: [
  {
  type: 'intro',
@@ -4418,7 +4418,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-04-07',
  relatedServices: ['iv-therapy', 'longevity-medicine'],
- relatedPosts: ['glutathione-iv-therapy', 'b-complex-iv-therapy', 'iv-therapy-vs-oral-supplements'],
+ relatedPosts: ['iv-therapy-vs-oral-supplements', 'glutathione-iv-therapy', 'telemedicine-peptide-therapy', 'peptide-legality-nevada'],
  content: [
  {
  type: 'intro',
@@ -4536,7 +4536,7 @@ const posts: Record<string, Post> = {
  readTime: '6 min read',
  date: '2026-04-08',
  relatedServices: ['iv-therapy', 'weight-management'],
- relatedPosts: ['custom-iv-protocols', 'b-complex-iv-therapy', 'peptide-injection-guide'],
+ relatedPosts: ['iv-therapy-vs-oral-supplements', 'custom-iv-protocols', 'glutathione-iv-therapy', 'prp-therapy-joints'],
  content: [
  {
  type: 'intro',
@@ -4639,7 +4639,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-04-01',
  relatedServices: ['regenerative-medicine', 'peptide-therapy'],
- relatedPosts: ['peptide-therapy-joint-health', 'growth-factor-therapy', 'tissue-repair-peptides'],
+ relatedPosts: ['peptide-therapy-joint-health', 'growth-factor-therapy', 'nerve-regeneration-peptides', 'tissue-repair-peptides'],
  content: [
  {
  type: 'intro',
@@ -4756,7 +4756,7 @@ const posts: Record<string, Post> = {
  readTime: '7 min read',
  date: '2026-04-02',
  relatedServices: ['peptide-therapy', 'regenerative-medicine'],
- relatedPosts: ['prp-therapy-joints', 'tissue-repair-peptides', 'nerve-regeneration-peptides'],
+ relatedPosts: ['tissue-repair-peptides', 'growth-factor-therapy', 'prp-therapy-joints', 'nerve-regeneration-peptides'],
  content: [
  {
  type: 'intro',
@@ -4863,7 +4863,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-04-03',
  relatedServices: ['regenerative-medicine', 'peptide-therapy'],
- relatedPosts: ['prp-therapy-joints', 'peptide-therapy-joint-health', 'tissue-repair-peptides'],
+ relatedPosts: ['peptide-therapy-joint-health', 'prp-therapy-joints', 'tissue-repair-peptides', 'mitochondrial-dysfunction-aging'],
  content: [
  {
  type: 'intro',
@@ -4977,7 +4977,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-04-04',
  relatedServices: ['peptide-therapy', 'regenerative-medicine'],
- relatedPosts: ['peptide-therapy-joint-health', 'prp-therapy-joints', 'nerve-regeneration-peptides'],
+ relatedPosts: ['peptide-therapy-joint-health', 'growth-factor-therapy', 'prp-therapy-joints', 'peptide-injection-guide'],
  content: [
  {
  type: 'intro',
@@ -5090,7 +5090,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-04-05',
  relatedServices: ['peptide-therapy', 'regenerative-medicine'],
- relatedPosts: ['tissue-repair-peptides', 'peptide-therapy-joint-health', 'gut-health-peptide-therapy'],
+ relatedPosts: ['peptide-therapy-joint-health', 'gut-health-peptide-therapy', 'growth-factor-therapy', 'autophagy-cellular-cleanup'],
  content: [
  {
  type: 'intro',
@@ -5205,7 +5205,7 @@ const posts: Record<string, Post> = {
  readTime: '8 min read',
  date: '2026-04-06',
  relatedServices: ['peptide-therapy', 'regenerative-medicine'],
- relatedPosts: ['nerve-regeneration-peptides', 'tissue-repair-peptides', 'tissue repair peptide protocols-research'],
+ relatedPosts: ['nerve-regeneration-peptides', 'peptide-injection-guide', 'mitochondrial-dysfunction-aging', 'telemedicine-peptide-therapy'],
  content: [
  {
  type: 'intro',
