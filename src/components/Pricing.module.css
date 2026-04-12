@@ -1,0 +1,218 @@
+.pricing {
+  background: #051616;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(72,199,142,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(255,255,255,0.04);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 24px 48px rgba(72, 199, 142, 0.14);
+  transform: translateY(-8px);
+  border-color: rgba(72,199,142,0.2);
+}
+
+.highlight {
+  border-color: var(--primary-accent);
+  background: linear-gradient(180deg, rgba(72,199,142,0.08) 0%, rgba(255,255,255,0.03) 40%);
+  box-shadow: 0 8px 32px rgba(72,199,142,0.12);
+}
+
+.highlight:hover {
+  box-shadow: 0 24px 56px rgba(72,199,142,0.2);
+}
+
+.popularBadge {
+  position: absolute;
+  top: 1.25rem;
+  right: -2rem;
+  background: linear-gradient(135deg, var(--primary-accent), #38a169);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 3rem;
+  transform: rotate(45deg);
+  transform-origin: center;
+  box-shadow: 0 2px 12px rgba(72,199,142,0.3);
+}
+
+.tierName {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.period {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.features li svg {
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 3px rgba(72,199,142,0.4));
+}
+
+.cta {
+  width: 100%;
+  text-align: center;
+}
+
+.infusionRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.infusionCard {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #004a4a 100%);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(72,199,142,0.15);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infusionCard:hover {
+  border-color: rgba(72,199,142,0.3);
+  box-shadow: 0 8px 24px rgba(72,199,142,0.1);
+}
+
+.infusionName {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.4;
+}
+
+.infusionPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.infusionPrice span:first-child {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-accent);
+  text-shadow: 0 0 12px rgba(72,199,142,0.3);
+}
+
+.infusionNote {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.disclaimer {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.35);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .infusionCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .infusionPrice {
+    align-items: flex-start;
+    margin-left: 0;
+  }
+  .disclaimer {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://livenowlongevity.com/sitemap.xml
+
+# Block low-value pages
+Disallow: /privacy-policy
+Disallow: /disclaimer

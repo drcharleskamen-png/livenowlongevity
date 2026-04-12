@@ -1,0 +1,58 @@
+.clinic {
+  background: #062018;
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.clinic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(72,199,142,0.04), transparent);
+  pointer-events: none;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.iconWrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(72, 199, 142, 0.15), rgba(78,205,196,0.08));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(72,199,142,0.15);
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.address {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 600px) {
+  .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
