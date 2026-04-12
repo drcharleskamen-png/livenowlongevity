@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogContent from '@/components/BlogContent';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import styles from './blog.module.css';
 import type { Metadata } from 'next';
 
@@ -45,6 +46,10 @@ export const metadata: Metadata = {
 export default function BlogPage() {
  return (
  <>
+ <BreadcrumbSchema items={[
+   { name: 'Home', url: 'https://livenowlongevity.com' },
+   { name: 'Blog', url: 'https://livenowlongevity.com/blog' },
+ ]} />
  <Navbar />
  <BlogContent />
  <Footer />

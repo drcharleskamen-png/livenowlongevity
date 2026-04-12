@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import ServiceSchema from './ServiceSchema';
+import BreadcrumbSchema from './BreadcrumbSchema';
 import styles from './ServicePage.module.css';
 
 export default function ServicePageTemplate({
@@ -23,6 +24,11 @@ export default function ServicePageTemplate({
 }) {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://livenowlongevity.com' },
+        { name: 'Services', url: 'https://livenowlongevity.com' },
+        { name: title, url: `https://livenowlongevity.com/services/${title.toLowerCase().replace(/\s+/g, '-')}` },
+      ]} />
       <Navbar />
       <ServiceSchema title={title} slug={title.toLowerCase().replace(/\s+/g, '-')} faqs={faqs} />
       <section className={styles.hero}>

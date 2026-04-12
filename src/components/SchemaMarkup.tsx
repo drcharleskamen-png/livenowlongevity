@@ -74,8 +74,11 @@ export default function SchemaMarkup() {
  '@id': 'https://livenowlongevity.com/#physician',
  name: 'Dr. Charles Kamen, MD',
  jobTitle: 'Board-Certified Neurologist',
- description: 'Board-certified neurologist by the American Board of Psychiatry and Neurology providing peptide therapy, longevity medicine, and regenerative wellness programs in Las Vegas, NV.',
+ description: 'Board-certified neurologist by the American Board of Psychiatry and Neurology. Dr. Kamen completed neurology residency and fellowship at Loma Linda University and internship at Yale-New Haven Hospital. Specializes in peptide therapy, longevity medicine, and regenerative wellness programs in Las Vegas, NV.',
  medicalSpecialty: ['Neurology', 'Longevity Medicine', 'Regenerative Medicine'],
+ certifications: [
+ { '@type': 'PropertyValue', name: 'American Board of Psychiatry and Neurology', value: 'Board Certified Neurologist' },
+ ],
  worksFor: {
  '@type': 'MedicalBusiness',
  '@id': 'https://livenowlongevity.com/#business',
@@ -83,6 +86,8 @@ export default function SchemaMarkup() {
  },
  alumniOf: [
  { '@type': 'EducationalOrganization', name: 'Albert Einstein College of Medicine' },
+ { '@type': 'EducationalOrganization', name: 'Yale-New Haven Hospital' },
+ { '@type': 'EducationalOrganization', name: 'Loma Linda University' },
  ],
  knowsAbout: [
  'Peptide Therapy',
@@ -102,6 +107,10 @@ export default function SchemaMarkup() {
  {
  '@type': 'FAQPage',
  '@id': 'https://livenowlongevity.com/#faq',
+ speakable: {
+ '@type': 'SpeakableSpecification',
+ cssSelector: '.faqItem h3',
+ },
  mainEntity: [
  {
  '@type': 'Question',

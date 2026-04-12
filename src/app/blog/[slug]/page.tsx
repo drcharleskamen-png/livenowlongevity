@@ -5,6 +5,7 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import BlogPostContent from '@/components/BlogPostContent';
 import BlogPostSchema from '@/components/BlogPostSchema';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import styles from '../../blog.module.css';
 
 interface Props {
@@ -424,6 +425,11 @@ export default async function BlogPostPage({ params }: Props) {
 
  return (
  <>
+ <BreadcrumbSchema items={[
+   { name: 'Home', url: 'https://livenowlongevity.com' },
+   { name: 'Blog', url: 'https://livenowlongevity.com/blog' },
+   { name: post.title, url: `https://livenowlongevity.com/blog/${slug}` },
+ ]} />
  <Navbar />
  <BlogPostSchema
  title={post.title}

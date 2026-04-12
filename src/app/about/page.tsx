@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import AboutContent from '@/components/AboutContent';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import styles from './about.module.css';
 import type { Metadata } from 'next';
 
@@ -46,6 +47,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
  return (
  <>
+ <BreadcrumbSchema items={[
+   { name: 'Home', url: 'https://livenowlongevity.com' },
+   { name: 'About', url: 'https://livenowlongevity.com/about' },
+ ]} />
  <Navbar />
  <AboutContent />
  <CTASection />
