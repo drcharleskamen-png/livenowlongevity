@@ -22,21 +22,6 @@
   max-width: 700px;
 }
 
-.photoWrapper {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 1.5rem;
-}
-
-.heroPhoto {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(72, 199, 142, 0.5);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-
 .eyebrow {
   display: inline-block;
   font-family: 'Montserrat', sans-serif;

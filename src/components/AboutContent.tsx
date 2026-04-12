@@ -7,14 +7,6 @@ export default function AboutContent() {
  <>
  <section className={styles.hero}>
  <div className={styles.heroBg} />
- <motion.div
- className={styles.photoWrapper}
- initial={{ opacity: 0, scale: 0.9 }}
- animate={{ opacity: 1, scale: 1 }}
- transition={{ duration: 0.6 }}
- >
- <img src="/dr-kamen.png" alt="Dr. Charles Kamen, MD" className={styles.heroPhoto} />
- </motion.div>
  <div className={styles.heroContent}>
  <motion.span
  className={styles.eyebrow}

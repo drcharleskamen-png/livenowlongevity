@@ -47,15 +47,6 @@ export default function Hero() {
         <div className={styles.videoOverlay} />
       </motion.div>
 
-      <motion.div
-        className={styles.doctorPhoto}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <img src="/dr-kamen.png" alt="Dr. Charles Kamen, MD" />
-      </motion.div>
-
       <motion.div className={styles.content} style={{ opacity, y: yText }}>
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
