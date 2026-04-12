@@ -69,6 +69,9 @@ export const metadata: Metadata = {
  verification: {
  google: 'G-P2KF5QXBF2',
  },
+ other: {
+ 'msvalidate.01': 'YOUR_BING_VERIFICATION_CODE',
+ },
 };
 
 export default function RootLayout({

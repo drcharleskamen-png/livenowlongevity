@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
+import ServiceSchema from './ServiceSchema';
 import styles from './ServicePage.module.css';
 
 export default function ServicePageTemplate({
@@ -23,6 +24,7 @@ export default function ServicePageTemplate({
   return (
     <>
       <Navbar />
+      <ServiceSchema title={title} slug={title.toLowerCase().replace(/\s+/g, '-')} faqs={faqs} />
       <section className={styles.hero}>
         <div className={styles.heroBg} />
         <div className={styles.heroContent}>

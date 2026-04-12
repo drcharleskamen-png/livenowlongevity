@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import BlogPostContent from '@/components/BlogPostContent';
+import BlogPostSchema from '@/components/BlogPostSchema';
 import styles from '../../blog.module.css';
 
 interface Props {
@@ -424,6 +425,13 @@ export default async function BlogPostPage({ params }: Props) {
  return (
  <>
  <Navbar />
+ <BlogPostSchema
+ title={post.title}
+ description={post.description}
+ author={post.author}
+ date={post.date}
+ slug={slug}
+ />
  <BlogPostContent slug={slug} />
  <CTASection />
  <Footer />

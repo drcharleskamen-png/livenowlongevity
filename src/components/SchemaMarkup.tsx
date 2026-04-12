@@ -86,11 +86,11 @@ export default function SchemaMarkup() {
  ],
  knowsAbout: [
  'Peptide Therapy',
- 'tissue repair peptide protocols',
- 'dual-action weight medication',
- 'weight management medication',
+ 'Tissue Repair Peptides',
+ 'Growth Hormone Peptides',
+ 'Melanocortin Peptides',
  'NAD+ IV Therapy',
- 'weight management medications',
+ 'GLP-1/GIP Weight Therapy',
  'Weight Management',
  'Longevity Medicine',
  'Regenerative Medicine',
@@ -124,7 +124,7 @@ export default function SchemaMarkup() {
  name: 'What peptides does LiveNow Longevity offer?',
  acceptedAnswer: {
  '@type': 'Answer',
- text: 'LiveNow Longevity offers physician-guided peptide programs including tissue repair peptide protocols, dual-action weight medication, weight management medication, melanocortin peptide protocols, growth hormone-releasing peptide protocols, and growth hormone secretagogue protocols. All protocols are individualized based on medical evaluation.',
+ text: 'LiveNow Longevity offers physician-guided peptide programs including tissue repair peptides, growth hormone peptides, melanocortin peptides, and combination protocols. Weight management medications may also be incorporated as part of a comprehensive program. All protocols are individualized based on medical evaluation.',
  },
  },
  {
