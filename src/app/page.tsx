@@ -1,6 +1,7 @@
 'use client';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import ClinicSlider from '@/components/ClinicSlider';
 import WhyTrust from '@/components/WhyTrust';
 import Process from '@/components/Process';
 import Services from '@/components/Services';
@@ -17,13 +18,7 @@ export default function HomePage() {
     <main className={styles.main}>
       <Navbar />
       <Hero />
-      <section className={styles.grokSection}>
-        <img
-          src="/grok-image.png"
-          alt="Dr. Charles Kamen, MD - Board-Certified Neurologist at LiveNow Longevity"
-          className={styles.grokImage}
-        />
-      </section>
+      <ClinicSlider />
       <WhyTrust />
       <Process />
       <Services />
