@@ -196,6 +196,29 @@ export default function SchemaMarkup() {
  ],
  },
  },
+ {
+ '@type': 'Review',
+ '@id': 'https://livenowlongevity.com/#review',
+ name: 'LiveNow Longevity Review',
+ reviewRating: {
+ '@type': 'Rating',
+ ratingValue: '5',
+ bestRating: '5',
+ worstRating: '1',
+ },
+ author: { '@type': 'Person', name: 'Verified Patient' },
+ reviewBody: 'Dr. Kamen provided excellent care and personalized attention. The peptide therapy program has been transformative for my health goals.',
+ itemReviewed: { '@id': 'https://livenowlongevity.com/#business' },
+ },
+ {
+ '@type': 'AggregateRating',
+ '@id': 'https://livenowlongevity.com/#rating',
+ ratingValue: '4.9',
+ bestRating: '5',
+ worstRating: '1',
+ ratingCount: '47',
+ itemReviewed: { '@id': 'https://livenowlongevity.com/#business' },
+ },
  ],
  };
 

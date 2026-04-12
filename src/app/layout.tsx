@@ -93,6 +93,11 @@ export default function RootLayout({
  <meta name="geo.position" content="36.0108;-115.1192" />
  <meta name="ICBM" content="36.0108, -115.1192" />
  <meta name='theme-color' content='#041212' />
+ <meta name="mobile-web-app-capable" content="yes" />
+ <meta name="apple-mobile-web-app-capable" content="yes" />
+ <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+ <meta name="apple-mobile-web-app-title" content="LiveNow Longevity" />
+ <link rel="apple-touch-icon" href="/og-image.jpg" />
  <SchemaMarkup />
  </head>
  <body>
