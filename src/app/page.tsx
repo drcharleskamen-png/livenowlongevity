@@ -17,6 +17,13 @@ export default function HomePage() {
     <main className={styles.main}>
       <Navbar />
       <Hero />
+      <section className={styles.grokSection}>
+        <img
+          src="/grok-image.png"
+          alt="Dr. Charles Kamen, MD - Board-Certified Neurologist at LiveNow Longevity"
+          className={styles.grokImage}
+        />
+      </section>
       <WhyTrust />
       <Process />
       <Services />
