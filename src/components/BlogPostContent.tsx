@@ -27,7 +27,7 @@ interface Post {
 }
 
 const posts: Record<string, Post> = {
- 'tissue repair peptide protocols-research': {
+ 'bpc-157-research': {
  category: 'Peptide Therapy',
  readTime: '9 min read',
  date: '2026-03-28',
@@ -122,7 +122,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'weight management medication-vs-peptides': {
+ 'glp1-vs-peptides': {
  category: 'Weight Management',
  readTime: '8 min read',
  date: '2026-03-15',
@@ -558,7 +558,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'dual-action weight medication-vs-weight management medication': {
+ 'tirzepatide-vs-semaglutide': {
  category: 'Weight Management',
  readTime: '8 min read',
  date: '2026-03-20',
@@ -655,7 +655,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'weight management medication-side-effects-management': {
+ 'glp1-side-effects': {
  category: 'Weight Management',
  readTime: '7 min read',
  date: '2026-03-10',
@@ -756,7 +756,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'nutrition-glp1-therapy': {
+ 'nutrition-glp1': {
  category: 'Weight Management',
  readTime: '8 min read',
  date: '2026-03-05',
@@ -1303,7 +1303,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'glp1-maintenance-after-weight-loss': {
+ 'glp1-maintenance': {
  category: 'Weight Management',
  readTime: '7 min read',
  date: '2026-02-01',
@@ -2739,7 +2739,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide': {
+ 'ghrp-vs-ghs-guide': {
  category: 'Peptide Therapy',
  readTime: '8 min read',
  date: '2026-04-02',
@@ -2842,7 +2842,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'melanocortin peptide protocols-peptide-therapy': {
+ 'melanocortin-peptides': {
  category: 'Peptide Therapy',
  readTime: '7 min read',
  date: '2026-04-03',
@@ -2942,7 +2942,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'growth hormone-releasing peptide protocols-growth-hormone': {
+ 'ghrp-growth-hormone': {
  category: 'Peptide Therapy',
  readTime: '7 min read',
  date: '2026-04-04',
@@ -3049,7 +3049,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'lipolytic peptide protocols-fat-loss': {
+ 'lipolytic-peptides': {
  category: 'Peptide Therapy',
  readTime: '6 min read',
  date: '2026-04-05',
@@ -3149,7 +3149,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'growth hormone-releasing peptide protocols-vs-growth hormone secretagogue protocols': {
+ 'ghrp-vs-ghs-comparison': {
  category: 'Peptide Therapy',
  readTime: '7 min read',
  date: '2026-04-06',
@@ -3487,7 +3487,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'insulin signaling peptide protocols-peptide-response': {
+ 'insulin-signaling-peptides': {
  category: 'Peptide Therapy',
  readTime: '6 min read',
  date: '2026-04-09',
@@ -3588,7 +3588,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'triple-action weight medication-peptide': {
+ 'triple-action-glp1': {
  category: 'Peptide Therapy',
  readTime: '8 min read',
  date: '2026-04-10',
@@ -3682,7 +3682,7 @@ const posts: Record<string, Post> = {
  },
  ],
  },
- 'reproductive peptide protocols-peptide-therapy': {
+ 'reproductive-peptides': {
  category: 'Peptide Therapy',
  readTime: '7 min read',
  date: '2026-04-11',
