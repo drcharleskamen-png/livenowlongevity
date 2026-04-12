@@ -2,18 +2,7 @@
 import { useState, useEffect } from 'react';
 import styles from './ClinicSlider.module.css';
 
-const images = [
-  '/clinic-photos/IMG_5710.jpg',
-  '/clinic-photos/IMG_5705.jpg',
-  '/clinic-photos/IMG_5707.PNG',
-  '/clinic-photos/IMG_5700.jpg',
-  '/clinic-photos/IMG_5701.PNG',
-  '/clinic-photos/IMG_5702.PNG',
-  '/clinic-photos/IMG_5703.PNG',
-  '/clinic-photos/IMG_5704.PNG',
-  '/clinic-photos/IMG_5708.PNG',
-  '/clinic-photos/IMG_5709.PNG',
-];
+const images: string[] = [];
 
 export default function ClinicSlider() {
   const [current, setCurrent] = useState(0);

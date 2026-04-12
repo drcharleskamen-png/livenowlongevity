@@ -18,7 +18,6 @@ export default function HomePage() {
     <main className={styles.main}>
       <Navbar />
       <Hero />
-      <ClinicSlider />
       <WhyTrust />
       <Process />
       <Services />
