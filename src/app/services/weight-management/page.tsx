@@ -3,15 +3,15 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
  title: 'Weight Management Las Vegas | Dr. Charles Kamen MD | LiveNow Longevity',
- description: 'Medical weight management supervised by board-certified neurologist Dr. Charles Kamen, MD in Las Vegas. weight management medication programs (dual-action weight medication, weight management medication) with medical evaluation and ongoing physician monitoring.',
- keywords: 'weight management Las Vegas, weight management medication Las Vegas, dual-action weight medication Las Vegas, weight management medication Las Vegas, medical weight loss Nevada, Dr. Charles Kamen weight loss',
+ description: 'Medical weight management supervised by board-certified neurologist Dr. Charles Kamen, MD in Las Vegas. GLP-1/GIP medications and customized weight management programs with medical evaluation and ongoing physician monitoring.',
+ keywords: 'weight management Las Vegas, GLP-1 weight loss Las Vegas, medical weight loss Nevada, Dr. Charles Kamen weight loss, weight management medication Nevada',
  authors: [{ name: 'Dr. Charles Kamen, MD' }],
  alternates: {
  canonical: '/services/weight-management',
  },
  openGraph: {
  title: 'Weight Management Las Vegas | Dr. Charles Kamen, MD | LiveNow Longevity',
- description: 'Medical weight management supervised by board-certified neurologist Dr. Charles Kamen, MD. weight management medication programs (dual-action weight medication, weight management medication) with medical evaluation and physician monitoring.',
+ description: 'Medical weight management supervised by board-certified neurologist Dr. Charles Kamen, MD. GLP-1/GIP medications and customized weight management programs with medical evaluation and physician monitoring.',
  url: 'https://livenowlongevity.com/services/weight-management',
  siteName: 'LiveNow Longevity',
  type: 'website',
@@ -50,7 +50,7 @@ Every program begins with medical evaluation including lab work before any inter
 
 Medical weight management at LiveNow Longevity is physician-supervised. Dr. Kamen monitors progress, adjusts protocols as needed, and reviews labs regularly. Telemedicine consultations are available for Nevada residents.`,
  benefits: [
- 'weight management medications agonist protocols (dual-action weight medication, weight management medication) when clinically appropriate after medical evaluation and lab work',
+ 'GLP-1/GIP weight management medications when clinically appropriate after medical evaluation and lab work',
  'Comprehensive metabolic and hormone lab panels as part of the medical evaluation process',
  'Board-certified neurologist by the American Board of Psychiatry and Neurology supervision throughout your program',
  'Physician-provided nutrition and lifestyle guidance',
@@ -62,7 +62,7 @@ Medical weight management at LiveNow Longevity is physician-supervised. Dr. Kame
  'Individualized approach — every program is based on your health profile and goals',
  ],
  faqs: [
- { q: 'How do weight management medication medications work?', a: 'weight management medications are medications that affect appetite regulation, insulin sensitivity, and gastric emptying. They may be appropriate for patients whose medical evaluation indicates potential benefit. dual-action weight medication and weight management medication are weight management medications with FDA-approved indications for weight management.' },
+ { q: 'How do weight management medications work?', a: 'Weight management medications affect appetite regulation, insulin sensitivity, and gastric emptying. GLP-1/GIP medications are FDA-approved for weight management and may be appropriate for patients whose medical evaluation indicates potential benefit.' },
  { q: 'Am I a candidate for medical weight management with Dr. Kamen?', a: 'After medical consultation and lab evaluation, Dr. Kamen will determine whether a weight management program is appropriate for your individual health profile. Candidates are adults who have had a medical evaluation and have identified weight and metabolic health as personal goals.' },
  { q: 'What labs are included in the weight management evaluation?', a: 'Medical evaluation may include metabolic panels, hormone panels, and other markers depending on your health history. This helps ensure any recommended program is appropriate for your individual health status.' },
  { q: 'How much weight can I expect to lose?', a: 'Individual results vary based on many factors including starting health status, adherence to lifestyle recommendations, and individual response to medications. Clinical trial data for weight management medications shows significant weight loss in study populations. Your results may be different.' },

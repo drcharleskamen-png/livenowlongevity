@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'metabolic-adaptation-weight-loss', lastmod: new Date('2026-02-20'), priority: 0.7 },
     { slug: 'sleep-weight-loss-metabolism', lastmod: new Date('2026-02-15'), priority: 0.7 },
     { slug: 'leptin-resistance-weight-loss', lastmod: new Date('2026-02-08'), priority: 0.7 },
-    { slug: 'glp1-maintenance-after-weight-loss', lastmod: new Date('2026-02-01'), priority: 0.7 },
+    { slug: 'glp1-maintenance', lastmod: new Date('2026-02-01'), priority: 0.7 },
     { slug: 'cortisol-weight-loss-resistance', lastmod: new Date('2026-01-28'), priority: 0.7 },
     { slug: 'thyroid-metabolism-weight', lastmod: new Date('2026-01-22'), priority: 0.7 },
     { slug: 'biomarkers-adults-guide', lastmod: new Date('2026-04-01'), priority: 0.7 },

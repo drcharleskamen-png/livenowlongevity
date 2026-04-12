@@ -19,14 +19,14 @@ const posts: Record<string, {
  author: string;
  date: string;
 }> = {
- 'tissue repair peptide protocols-research': {
+ 'tissue-repair-peptides-research': {
  title: 'tissue repair peptide protocols Research: What the Evidence Shows | Dr. Charles Kamen, MD',
  description: 'Board-certified neurologist Dr. Charles Kamen, MD reviews published tissue repair peptide protocols research — animal and human studies, mechanisms of action, safety, and regulatory status. Evidence-based analysis.',
  keywords: 'tissue repair peptide protocols research, tissue repair peptide protocols studies, peptide therapy research, tissue repair peptide protocols Las Vegas, Dr. Charles Kamen tissue repair peptide protocols, pentadecapeptide research, tissue repair peptides',
  author: 'Dr. Charles Kamen, MD',
  date: '2026-03-28',
  },
- 'weight management medication-vs-peptides': {
+ 'glp1-vs-peptides': {
  title: 'weight management medication vs. Peptides for Weight Loss: Dr. Charles Kamen, MD Reviews the Science',
  description: 'Comparing weight management medications (dual-action weight medication, weight management medication) with targeted peptide protocols for weight management. Dr. Charles Kamen, MD explains mechanisms, evidence, and appropriate use.',
  keywords: 'weight management medication vs peptides weight loss, dual-action weight medication vs peptides, Dr. Charles Kamen weight loss, peptide therapy Las Vegas, weight management medication Las Vegas, medical weight loss Nevada',
@@ -61,14 +61,14 @@ const posts: Record<string, {
  author: 'Dr. Charles Kamen, MD',
  date: '2026-01-12',
  },
- 'dual-action weight medication-vs-weight management medication': {
+ 'glp1-vs-glp2-weight-loss': {
  title: 'dual-action weight medication vs weight management medication for Weight Loss: Dr. Charles Kamen, MD Compares the Science',
  description: 'dual-action weight medication (Zepbound®) vs weight management medication (Wegovy®) for weight loss. Board-certified neurologist Dr. Charles Kamen, MD explains mechanisms, trial data, and which may be appropriate for your situation.',
  keywords: 'dual-action weight medication vs weight management medication, Zepbound vs Wegovy, weight management medication weight loss, dual-action weight medication Las Vegas, weight management medication Las Vegas, Dr. Charles Kamen weight loss',
  author: 'Dr. Charles Kamen, MD',
  date: '2026-03-20',
  },
- 'weight management medication-side-effects-management': {
+ 'glp1-side-effects': {
  title: 'Managing weight management medication Side Effects: A Physician\'s Guide | Dr. Charles Kamen, MD',
  description: 'Nausea, fatigue, and GI discomfort on weight management medication medications. Dr. Charles Kamen, MD explains how to manage common weight management medication agonist side effects and when to seek medical attention.',
  keywords: 'weight management medication side effects, dual-action weight medication side effects, weight management medication nausea, weight management medication management, Dr. Charles Kamen weight management medication',
@@ -110,7 +110,7 @@ const posts: Record<string, {
  author: 'Dr. Charles Kamen, MD',
  date: '2026-02-08',
  },
- 'glp1-maintenance-after-weight-loss': {
+ 'glp1-maintenance': {
  title: 'Maintaining Weight After weight management medication Therapy: Dr. Charles Kamen, MD\'s Strategy',
  description: 'What happens after you reach your weight management medication weight loss goal. Dr. Charles Kamen, MD explains maintenance protocols, gradual tapering, and combining therapies for lasting results.',
  keywords: 'weight management medication maintenance, weight loss maintenance, dual-action weight medication maintenance, weight management medication tapering, Dr. Charles Kamen maintenance',
@@ -201,35 +201,35 @@ const posts: Record<string, {
  author: 'Dr. Charles Kamen, MD',
  date: '2026-02-05',
  },
- 'growth hormone secretagogue protocols-growth hormone secretagogue protocols-guide': {
+ 'ghrp-guide': {
  title: 'growth hormone secretagogue protocols: Growth Hormone Secretagogues Explained | Dr. Charles Kamen, MD',
  description: 'growth hormone secretagogue protocols is a growth hormone secretagogue combination studied for body composition and healing. Dr. Charles Kamen, MD explains mechanisms, research, and clinical use.',
  keywords: 'growth hormone secretagogue protocols growth hormone secretagogue protocols, growth hormone secretagogues, growth hormone secretagogue protocols Las Vegas, peptide growth hormone, Dr. Charles Kamen growth hormone secretagogue protocols',
  author: 'Dr. Charles Kamen, MD',
  date: '2026-04-02',
  },
- 'melanocortin peptide protocols-peptide-therapy': {
+ 'melanocortin-therapy': {
  title: 'melanocortin peptide protocols (Bremelanotide) for Wellness: Dr. Charles Kamen, MD Explains',
  description: 'melanocortin peptide protocols (bremelanotide) is a peptide that acts on melanocortin receptors. Dr. Charles Kamen, MD explains its mechanisms, potential applications, and what the research shows.',
  keywords: 'melanocortin peptide protocols bremelanotide, melanocortin peptide protocols peptide therapy, melanocortin peptide, Dr. Charles Kamen melanocortin peptide protocols',
  author: 'Dr. Charles Kamen, MD',
  date: '2026-04-03',
  },
- 'growth hormone-releasing peptide protocols-growth-hormone': {
+ 'ghrh-growth-hormone': {
  title: 'growth hormone-releasing peptide protocols for Growth Hormone Optimization | Dr. Charles Kamen, MD',
  description: 'growth hormone-releasing peptide protocols is a growth hormone-releasing hormone (GHRH) analog approved for HIV-related lipodystrophy. Dr. Charles Kamen, MD explains its use in longevity medicine and growth hormone optimization.',
  keywords: 'growth hormone-releasing peptide protocols growth hormone, growth hormone-releasing peptide protocols Las Vegas, growth hormone optimization, GHRH analog, Dr. Charles Kamen growth hormone-releasing peptide protocols',
  author: 'Dr. Charles Kamen, MD',
  date: '2026-04-04',
  },
- 'lipolytic peptide protocols-fat-loss': {
+ 'lipolytic-peptides-fat-loss': {
  title: 'lipolytic peptide protocols: The Fat-Burning Fragment Explained | Dr. Charles Kamen, MD',
  description: 'lipolytic peptide protocols is a fragment of human growth hormone studied for lipolytic activity. Dr. Charles Kamen, MD explains the research, regulatory status, and clinical considerations.',
  keywords: 'lipolytic peptide protocols fat loss, lipolytic peptide protocols peptide, lipolytic peptide, fat burning peptide, Dr. Charles Kamen lipolytic peptide protocols',
  author: 'Dr. Charles Kamen, MD',
  date: '2026-04-05',
  },
- 'growth hormone-releasing peptide protocols-vs-growth hormone secretagogue protocols': {
+ 'ghrh-vs-ghrp': {
  title: 'growth hormone-releasing peptide protocols vs growth hormone secretagogue protocols: Growth Hormone Releasing Hormones Compared | Dr. Charles Kamen, MD',
  description: 'growth hormone-releasing peptide protocols and growth hormone secretagogue protocols are both GHRH analogs used in peptide medicine. Dr. Charles Kamen, MD compares their mechanisms, dosing, and clinical applications.',
  keywords: 'growth hormone-releasing peptide protocols vs growth hormone secretagogue protocols, growth hormone releasing hormone, GHRH peptides, Dr. Charles Kamen growth hormone-releasing peptide protocols, peptide therapy comparison',
@@ -250,21 +250,21 @@ const posts: Record<string, {
  author: 'Dr. Charles Kamen, MD',
  date: '2026-04-08',
  },
- 'insulin signaling peptide protocols-peptide-response': {
+ 'insulin-peptide-response': {
  title: 'Understanding Your Body\'s Peptide Response | Dr. Charles Kamen, MD',
  description: 'Why do some patients respond better to peptides than others? Dr. Charles Kamen, MD explains individual variability in peptide therapy response and how evaluation guides protocol design.',
  keywords: 'peptide therapy response, individual peptide response, peptide evaluation, Dr. Charles Kamen peptide response',
  author: 'Dr. Charles Kamen, MD',
  date: '2026-04-09',
  },
- 'triple-action weight medication-peptide': {
+ 'triple-hormone-peptide': {
  title: 'triple-action weight medication: The Triple-Hormone Agonist Peptide | Dr. Charles Kamen, MD',
  description: 'Triple-action weight medication is a-hormone medication (weight management medication, GIP, glucagon) showing promising weight loss results in trials. Dr. Charles Kamen, MD reviews the mechanism and trial data.',
  keywords: 'triple-action weight medication peptide, triple hormone agonist, triple-action weight medication weight loss, weight management medication GIP glucagon agonist, Dr. Charles Kamen triple-action weight medication',
  author: 'Dr. Charles Kamen, MD',
  date: '2026-04-10',
  },
- 'reproductive peptide protocols-peptide-therapy': {
+ 'reproductive-peptide-therapy': {
  title: 'reproductive peptide protocols and Peptide Medicine | Dr. Charles Kamen, MD',
  description: 'reproductive peptide protocols is a neuropeptide that regulates the reproductive hormone axis. Dr. Charles Kamen, MD explains the science of reproductive peptide protocols and its emerging role in peptide medicine.',
  keywords: 'reproductive peptide protocols peptide therapy, reproductive peptide protocols hormone, reproductive hormone peptide, Dr. Charles Kamen reproductive peptide protocols',
