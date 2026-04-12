@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://livenowlongevity.com';
+  const baseUrl = 'https://www.livenowlongevity.com';
   const now = new Date();
 
   const blogPosts = [
@@ -43,6 +43,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'tissue-repair-peptides', lastmod: new Date('2026-04-04'), priority: 0.7 },
     { slug: 'nerve-regeneration-peptides', lastmod: new Date('2026-04-05'), priority: 0.7 },
     { slug: 'gut-health-peptide-therapy', lastmod: new Date('2026-04-06'), priority: 0.7 },
+    { slug: 'tissue-repair-peptides-research', lastmod: new Date('2026-04-04'), priority: 0.7 },
+    { slug: 'glp1-vs-peptides', lastmod: new Date('2026-04-04'), priority: 0.7 },
+    { slug: 'glp1-vs-glp2-weight-loss', lastmod: new Date('2026-04-04'), priority: 0.7 },
+    { slug: 'glp1-side-effects', lastmod: new Date('2026-04-04'), priority: 0.7 },
+    { slug: 'ghrp-guide', lastmod: new Date('2026-04-07'), priority: 0.7 },
+    { slug: 'melanocortin-therapy', lastmod: new Date('2026-04-07'), priority: 0.7 },
+    { slug: 'ghrh-growth-hormone', lastmod: new Date('2026-04-07'), priority: 0.7 },
+    { slug: 'lipolytic-peptides-fat-loss', lastmod: new Date('2026-04-07'), priority: 0.7 },
+    { slug: 'ghrh-vs-ghrp', lastmod: new Date('2026-04-07'), priority: 0.7 },
+    { slug: 'insulin-peptide-response', lastmod: new Date('2026-04-07'), priority: 0.7 },
+    { slug: 'triple-hormone-peptide', lastmod: new Date('2026-04-07'), priority: 0.7 },
+    { slug: 'reproductive-peptide-therapy', lastmod: new Date('2026-04-07'), priority: 0.7 },
   ];
 
   return [

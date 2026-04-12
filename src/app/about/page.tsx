@@ -17,9 +17,11 @@ export const metadata: Metadata = {
  openGraph: {
  title: 'About Dr. Charles Kamen, MD | LiveNow Longevity Las Vegas',
  description: 'Board-certified neurologist Dr. Charles Kamen, MD. Albert Einstein College of Medicine. Specializing in peptide therapy, longevity medicine, and regenerative treatments in Las Vegas.',
- url: 'https://livenowlongevity.com/about',
+ url: 'https://www.livenowlongevity.com/about',
  siteName: 'LiveNow Longevity',
  type: 'profile',
+ firstName: 'Charles',
+ lastName: 'Kamen',
  images: [
  {
  url: '/api/og?title=About%20Dr.%20Charles%20Kamen%2C%20MD&description=Board-certified%20neurologist%20providing%20peptide%20therapy%2C%20longevity%20medicine%2C%20and%20regenerative%20treatments%20in%20Las%20Vegas.',
@@ -48,8 +50,8 @@ export default function AboutPage() {
  return (
  <>
  <BreadcrumbSchema items={[
-   { name: 'Home', url: 'https://livenowlongevity.com' },
-   { name: 'About', url: 'https://livenowlongevity.com/about' },
+   { name: 'Home', url: 'https://www.livenowlongevity.com' },
+   { name: 'About', url: 'https://www.livenowlongevity.com/about' },
  ]} />
  <Navbar />
  <AboutContent />

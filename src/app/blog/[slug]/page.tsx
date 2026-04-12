@@ -389,7 +389,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  authors: ['Dr. Charles Kamen, MD'],
  section: 'Education',
  siteName: 'LiveNow Longevity',
- url: `https://livenowlongevity.com/blog/${slug}`,
+ url: `https://www.livenowlongevity.com/blog/${slug}`,
  images: [
  {
  url: `/api/og?title=${encodeURIComponent(post.title)}&description=${encodeURIComponent(post.description.substring(0, 80))}`,
@@ -408,7 +408,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  images: [`/api/og?title=${encodeURIComponent(post.title)}&description=${encodeURIComponent(post.description.substring(0, 80))}`],
  },
  alternates: {
- canonical: `https://livenowlongevity.com/blog/${slug}`,
+ canonical: `https://www.livenowlongevity.com/blog/${slug}`,
  },
  robots: {
  index: true,
@@ -426,9 +426,9 @@ export default async function BlogPostPage({ params }: Props) {
  return (
  <>
  <BreadcrumbSchema items={[
-   { name: 'Home', url: 'https://livenowlongevity.com' },
-   { name: 'Blog', url: 'https://livenowlongevity.com/blog' },
-   { name: post.title, url: `https://livenowlongevity.com/blog/${slug}` },
+   { name: 'Home', url: 'https://www.livenowlongevity.com' },
+   { name: 'Blog', url: 'https://www.livenowlongevity.com/blog' },
+   { name: post.title, url: `https://www.livenowlongevity.com/blog/${slug}` },
  ]} />
  <Navbar />
  <BlogPostSchema
