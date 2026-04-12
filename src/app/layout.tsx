@@ -26,7 +26,7 @@ export const metadata: Metadata = {
  authors: [{ name: 'Dr. Charles Kamen, MD' }],
  creator: 'LiveNow Longevity',
  publisher: 'LiveNow Longevity',
- metadataBase: new URL('https://livenowlongevity.com'),
+ metadataBase: new URL('https://www.livenowlongevity.com'),
  alternates: {
  canonical: '/',
  types: {
