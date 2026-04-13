@@ -107,7 +107,7 @@ export default function RootLayout({
      __html: `
        window.LIVENOW_CHAT_API = 'https://livenow-chatbot.vercel.app';
        var script = document.createElement('script');
-       script.src = 'https://livenow-chatbot.vercel.app/widget.js';
+       script.src = 'https://livenow-chatbot.vercel.app/widget.v2.js';
        script.async = true;
        document.body.appendChild(script);
        // Debug: verify widget loads
