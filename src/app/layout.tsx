@@ -102,6 +102,12 @@ export default function RootLayout({
  </head>
  <body>
  <Providers>{children}</Providers>
+ <script
+   dangerouslySetInnerHTML={{
+     __html: `window.LIVENOW_CHAT_API = 'https://livenow-chatbot.vercel.app';`,
+   }}
+ />
+ <script src="https://livenow-chatbot.vercel.app/widget.js" async />
  </body>
  </html>
  );
