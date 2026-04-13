@@ -110,6 +110,9 @@ export default function RootLayout({
        script.src = 'https://livenow-chatbot.vercel.app/widget.js';
        script.async = true;
        document.body.appendChild(script);
+       // Debug: verify widget loads
+       script.onload = function() { console.log('Widget loaded, ln-root exists:', !!document.getElementById('ln-root')); };
+       script.onerror = function() { console.error('Widget failed to load'); };
      `,
    }}
  />
