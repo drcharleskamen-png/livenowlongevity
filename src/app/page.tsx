@@ -1,7 +1,6 @@
 'use client';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import ClinicSlider from '@/components/ClinicSlider';
 import WhyTrust from '@/components/WhyTrust';
 import Process from '@/components/Process';
 import Services from '@/components/Services';
@@ -18,7 +17,6 @@ export default function HomePage() {
     <main className={styles.main}>
       <Navbar />
       <Hero />
-      <ClinicSlider />
       <WhyTrust />
       <Process />
       <Services />
