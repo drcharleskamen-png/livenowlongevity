@@ -104,18 +104,10 @@ export default function RootLayout({
  <Providers>{children}</Providers>
  <script
    dangerouslySetInnerHTML={{
-     __html: `
-       window.LIVENOW_CHAT_API = 'https://livenow-chatbot.vercel.app';
-       var script = document.createElement('script');
-       script.src = 'https://livenow-chatbot.vercel.app/widget.js?v=3';
-       script.async = true;
-       document.body.appendChild(script);
-       // Debug: verify widget loads
-       script.onload = function() { console.log('Widget loaded, ln-root exists:', !!document.getElementById('ln-root')); };
-       script.onerror = function() { console.error('Widget failed to load'); };
-     `,
+     __html: `window.LIVENOW_CHAT_API = 'https://livenow-chatbot.vercel.app';`,
    }}
  />
+ <script src="https://livenow-chatbot.vercel.app/widget.js?v=5" async />
  </body>
  </html>
  );
