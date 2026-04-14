@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className={styles.actions}>
           <a href="tel:702-808-2650" className={styles.phone}>702-808-2650</a>
           <a
-            href="https://livewell21.clientsecure.me"
+            href="https://livenowlongevity.clientsecure.me"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
@@ -80,7 +80,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="https://livewell21.clientsecure.me"
+              href="https://livenowlongevity.clientsecure.me"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

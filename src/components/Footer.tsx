@@ -4,7 +4,7 @@ import styles from './Footer.module.css';
 const footerLinks = [
   { label: 'Blog', href: '/blog' },
   { label: 'Services', href: '/#services' },
-  { label: 'Book Appointment', href: 'https://livewell21.clientsecure.me' },
+  { label: 'Book Appointment', href: 'https://livenowlongevity.clientsecure.me' },
 ];
 
 const legalLinks = [

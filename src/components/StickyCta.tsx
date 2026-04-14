@@ -28,7 +28,7 @@ export default function StickyCta() {
         >
           <span>Ready to optimize your health? Book Now</span>
           <a
-            href="https://livewell21.clientsecure.me"
+            href="https://livenowlongevity.clientsecure.me"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaBtn}

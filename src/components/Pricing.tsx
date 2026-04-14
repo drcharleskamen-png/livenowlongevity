@@ -81,7 +81,7 @@ export default function Pricing() {
                 ))}
               </ul>
               <a
-                href="https://livewell21.clientsecure.me"
+                href="https://livenowlongevity.clientsecure.me"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`btn-primary ${styles.cta}`}

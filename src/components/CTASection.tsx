@@ -16,7 +16,7 @@ export default function CTASection() {
           <h2>Ready to Start Your Longevity Journey?</h2>
           <p>Schedule a consultation with Dr. Kamen today.</p>
           <motion.a
-            href="https://livewell21.clientsecure.me"
+            href="https://livenowlongevity.clientsecure.me"
             target="_blank"
             rel="noopener noreferrer"
             className={`btn-primary ${styles.ctaBtn}`}
