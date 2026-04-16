@@ -6,7 +6,7 @@ import Process from '@/components/Process';
 import Services from '@/components/Services';
 import FAQ from '@/components/FAQ';
 import Pricing from '@/components/Pricing';
-import ClinicSection from '@/components/ClinicSection';
+import ClinicSlider from '@/components/ClinicSlider';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import StickyCta from '@/components/StickyCta';
@@ -22,7 +22,7 @@ export default function HomePage() {
       <Services />
       <FAQ />
       <Pricing />
-      <ClinicSection />
+      <ClinicSlider />
       <CTASection />
       <Footer />
       <StickyCta />

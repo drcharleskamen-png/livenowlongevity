@@ -1,0 +1,289 @@
+.clinicSection {
+  background: #041212;
+  padding: 80px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.clinicSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center top, rgba(72,199,142,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.sliderWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 600px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #062018;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(72,199,142,0.1);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 60%,
+    rgba(4,18,18,0.4) 100%
+  );
+  pointer-events: none;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(4, 18, 18, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(72, 199, 142, 0.3);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+}
+
+.navBtn:hover {
+  background: rgba(72, 199, 142, 0.2);
+  border-color: #48c78e;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.prevBtn {
+  left: 20px;
+}
+
+.nextBtn {
+  right: 20px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  padding: 10px 16px;
+  background: rgba(4, 18, 18, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.dotActive {
+  background: #48c78e;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(72, 199, 142, 0.5);
+}
+
+.counter {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  background: rgba(4, 18, 18, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  z-index: 10;
+}
+
+.clinicInfo {
+  margin-top: 2.5rem;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(72, 199, 142, 0.08) 0%, rgba(6, 32, 24, 0.8) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(72, 199, 142, 0.15);
+  box-shadow: 0 8px 32px rgba(72, 199, 142, 0.1);
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(72, 199, 142, 0.2), rgba(78, 205, 196, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(72, 199, 142, 0.2);
+}
+
+.infoText {
+  text-align: left;
+}
+
+.infoTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.infoAddress {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .clinicSection {
+    padding: 60px 0 80px;
+  }
+
+  .slider {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+  }
+
+  .navBtn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .prevBtn {
+    left: 12px;
+  }
+
+  .nextBtn {
+    right: 12px;
+  }
+
+  .dots {
+    bottom: 14px;
+    padding: 8px 14px;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .infoCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .infoText {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+  }
+
+  .navBtn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navBtn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .prevBtn {
+    left: 8px;
+  }
+
+  .nextBtn {
+    right: 8px;
+  }
+
+  .counter {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+}
