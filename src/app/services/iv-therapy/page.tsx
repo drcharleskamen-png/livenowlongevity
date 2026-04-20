@@ -26,8 +26,8 @@ export const metadata: Metadata = {
  },
  twitter: {
  card: 'summary_large_image',
- site: '@livewell21',
- creator: '@livewell21',
+ site: '@livenow_longevity',
+ creator: '@livenow_longevity',
  title: 'IV Therapy Las Vegas | Dr. Charles Kamen, MD | LiveNow Longevity',
  description: 'Physician-supervised IV therapy in Las Vegas by Dr. Charles Kamen, MD. NAD+, glutathione, and vitamin infusions.',
  images: ['/api/og?title=IV%20Therapy%20Las%20Vegas&description=Physician-supervised%20IV%20therapy%20by%20Dr.%20Charles%20Kamen%2C%20MD.'],

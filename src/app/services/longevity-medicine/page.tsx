@@ -26,8 +26,8 @@ export const metadata: Metadata = {
  },
  twitter: {
  card: 'summary_large_image',
- site: '@livewell21',
- creator: '@livewell21',
+ site: '@livenow_longevity',
+ creator: '@livenow_longevity',
  title: 'Longevity Medicine Las Vegas | Dr. Charles Kamen, MD | LiveNow Longevity',
  description: 'Longevity medicine programs by board-certified neurologist Dr. Charles Kamen, MD in Las Vegas. Biomarker tracking and wellness protocols.',
  images: ['/api/og?title=Longevity%20Medicine%20Las%20Vegas&description=Longevity%20medicine%20by%20Dr.%20Charles%20Kamen%2C%20MD.'],

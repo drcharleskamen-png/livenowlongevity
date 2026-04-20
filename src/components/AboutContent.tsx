@@ -46,6 +46,16 @@ export default function AboutContent() {
  <p>His practice is built on a simple principle: optimal health requires personalized, physician-supervised care grounded in rigorous diagnostics and evidence-based interventions. He does not believe in cookie-cutter protocols. Every patient receives a comprehensive evaluation — including labs, imaging if needed, and a thorough review of their medical history — before any treatment plan is designed.</p>
  <p>Dr. Kamen specializes in peptide therapy, weight management, NAD+ IV therapy, and regenerative longevity protocols. He is board-certified in neurology by the American Board of Psychiatry and Neurology and maintains active medical licensure in Nevada.</p>
 
+ <p style={{ fontSize: '0.95rem', color: 'var(--color-muted, #666)', marginTop: '1.5rem' }}>
+ Dr. Kamen&rsquo;s credentials can be independently verified through the{' '}
+ <a href="https://www.abpn.com" target="_blank" rel="noopener noreferrer">American Board of Psychiatry and Neurology</a>,{' '}
+ <a href="https://npiregistry.cms.hhs.gov/provider-view/1033408679" target="_blank" rel="noopener noreferrer">NPI Registry (1033408679)</a>,{' '}
+ <a href="https://www.doximity.com/pub/charles-kamen-md" target="_blank" rel="noopener noreferrer">Doximity</a>,{' '}
+ <a href="https://health.usnews.com/doctors/charles-kamen-783888" target="_blank" rel="noopener noreferrer">US News Doctors</a>,{' '}
+ <a href="https://www.healthgrades.com/physician/dr-charles-kamen-gd7qv" target="_blank" rel="noopener noreferrer">Healthgrades</a>, and{' '}
+ <a href="https://www.linkedin.com/in/charleskamen/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+ </p>
+
  <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>A Different Approach to Medicine</h2>
  <p>Dr. Kamen's approach to longevity and wellness is rooted in his neurology background — understanding that the body operates as an interconnected system, not a collection of isolated symptoms. Rather than addressing complaints in isolation, he looks at the underlying biological drivers of aging, metabolic dysfunction, and tissue decline. His protocols are designed to work with these systems rather than around them.</p>
  <p>This means taking the time to understand what is actually happening at the cellular and systems level before recommending any intervention. Whether a patient is seeking peptide therapy for tissue repair, medical weight management for metabolic health, or NAD+ IV therapy for energy and cognitive optimization, every program begins with a thorough medical evaluation and lab work tailored to the patient's goals and health history.</p>

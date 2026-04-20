@@ -26,8 +26,8 @@ export const metadata: Metadata = {
  },
  twitter: {
  card: 'summary_large_image',
- site: '@livewell21',
- creator: '@livewell21',
+ site: '@livenow_longevity',
+ creator: '@livenow_longevity',
  title: 'NAD+ Therapy Las Vegas | Dr. Charles Kamen, MD | LiveNow Longevity',
  description: 'NAD+ IV therapy supervised by board-certified neurologist Dr. Charles Kamen, MD in Las Vegas.',
  images: ['/api/og?title=NAD%2B%20Therapy%20Las%20Vegas&description=NAD%2B%20IV%20therapy%20by%20Dr.%20Charles%20Kamen%2C%20MD.'],

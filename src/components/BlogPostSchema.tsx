@@ -8,41 +8,55 @@ interface Props {
   slug: string;
 }
 
-export default function BlogPostSchema({ title, description, author, date, slug }: Props) {
+export default function BlogPostSchema({ title, description, date, slug }: Props) {
+  const url = `https://www.livenowlongevity.com/blog/${slug}`;
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: title,
-    description: description,
-    image: {
-      '@type': 'ImageObject',
-      url: 'https://livenowlongevity.com/og-image.jpg',
-      width: 1200,
-      height: 630,
-    },
-    author: {
-      '@id': 'https://www.livenowlongevity.com/#physician',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'LiveNow Longevity',
-      url: 'https://www.livenowlongevity.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://livenowlongevity.com/og-image.jpg',
-        width: 1200,
-        height: 630,
+    '@graph': [
+      {
+        '@type': 'MedicalWebPage',
+        '@id': `${url}#webpage`,
+        url,
+        name: title,
+        description,
+        inLanguage: 'en-US',
+        isPartOf: { '@id': 'https://livenowlongevity.com/#website' },
+        about: { '@id': 'https://livenowlongevity.com/#business' },
+        lastReviewed: date,
+        reviewedBy: { '@id': 'https://livenowlongevity.com/#physician' },
+        audience: {
+          '@type': 'MedicalAudience',
+          audienceType: 'Patient',
+        },
       },
-    },
-    datePublished: date,
-    dateModified: date,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `https://www.livenowlongevity.com/blog/${slug}`,
-    },
-    url: `https://www.livenowlongevity.com/blog/${slug}`,
-    articleSection: 'Education',
-    keywords: title,
+      {
+        '@type': 'MedicalScholarlyArticle',
+        '@id': `${url}#article`,
+        headline: title,
+        description,
+        url,
+        mainEntityOfPage: { '@id': `${url}#webpage` },
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://livenowlongevity.com/og-image.jpg',
+          width: 1200,
+          height: 630,
+        },
+        author: { '@id': 'https://livenowlongevity.com/#physician' },
+        reviewedBy: { '@id': 'https://livenowlongevity.com/#physician' },
+        publisher: { '@id': 'https://livenowlongevity.com/#organization' },
+        datePublished: date,
+        dateModified: date,
+        lastReviewed: date,
+        articleSection: 'Education',
+        keywords: title,
+        inLanguage: 'en-US',
+        audience: {
+          '@type': 'MedicalAudience',
+          audienceType: 'Patient',
+        },
+      },
+    ],
   };
 
   return (

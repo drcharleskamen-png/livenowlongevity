@@ -29,9 +29,6 @@ export const metadata: Metadata = {
  metadataBase: new URL('https://www.livenowlongevity.com'),
  alternates: {
  canonical: '/',
- types: {
- 'application/ld+json': '/api/og',
- },
  },
  openGraph: {
  type: 'website',
@@ -51,8 +48,8 @@ export const metadata: Metadata = {
  },
  twitter: {
  card: 'summary_large_image',
- site: '@livewell21',
- creator: '@livewell21',
+ site: '@livenow_longevity',
+ creator: '@livenow_longevity',
  title: 'LiveNow Longevity Las Vegas | Dr. Charles Kamen, MD',
  description: 'Physician-supervised peptide therapy, weight management, NAD+ IV therapy, and regenerative medicine in Las Vegas.',
  images: ['/api/og?title=LiveNow%20Longevity&description=Physician-supervised%20peptide%20therapy%2C%20medical%20weight%20management%2C%20NAD%2B%20IV%20therapy%2C%20and%20regenerative%20medicine%20in%20Las%20Vegas.'],
@@ -68,9 +65,6 @@ export const metadata: Metadata = {
  },
  verification: {
  google: 'G-P2KF5QXBF2',
- },
- other: {
- 'msvalidate.01': 'YOUR_BING_VERIFICATION_CODE',
  },
 };
 

@@ -401,8 +401,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  },
  twitter: {
  card: 'summary_large_image',
- site: '@livewell21',
- creator: '@livewell21',
+ site: '@livenow_longevity',
+ creator: '@livenow_longevity',
  title: post.title,
  description: post.description,
  images: [`/api/og?title=${encodeURIComponent(post.title)}&description=${encodeURIComponent(post.description.substring(0, 80))}`],

@@ -26,8 +26,8 @@ export const metadata: Metadata = {
  },
  twitter: {
  card: 'summary_large_image',
- site: '@livewell21',
- creator: '@livewell21',
+ site: '@livenow_longevity',
+ creator: '@livenow_longevity',
  title: 'Weight Management Las Vegas | Dr. Charles Kamen, MD | LiveNow Longevity',
  description: 'Medical weight management supervised by board-certified neurologist Dr. Charles Kamen, MD. weight management medication programs with physician monitoring.',
  images: ['/api/og?title=Weight%20Management%20Las%20Vegas&description=Medical%20weight%20management%20by%20Dr.%20Charles%20Kamen%2C%20MD.'],
