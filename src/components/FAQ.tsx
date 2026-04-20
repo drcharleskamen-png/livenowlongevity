@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './FAQ.module.css';
 
-const faqs = [
+export const faqs = [
  {
  q: 'What is peptide therapy?',
  a: 'Peptide therapy uses specific peptides — short chains of amino acids — to signal and stimulate targeted biological responses in the body. Peptides can support healing, performance, weight management, and overall wellness when administered under physician supervision.',

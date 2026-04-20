@@ -259,64 +259,6 @@ export default function SchemaMarkup() {
         medicalSpecialty: 'IV Therapy',
       },
       {
-        '@type': 'FAQPage',
-        '@id': 'https://livenowlongevity.com/#faq',
-        speakable: {
-          '@type': 'SpeakableSpecification',
-          cssSelector: '.faqItem h3',
-        },
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'What is peptide therapy?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Peptide therapy uses specific peptides \u2014 short chains of amino acids \u2014 to signal and stimulate targeted biological responses in the body. Peptides are prescribed by Dr. Kamen after medical evaluation and sourced from licensed US compounding pharmacies.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Is peptide therapy legal in Nevada?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes. In Nevada, peptides may be prescribed by a licensed physician for legitimate medical purposes. All peptides prescribed at LiveNow Longevity are sourced from licensed American 503A/503B compounding pharmacies in compliance with Nevada law.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What peptides does LiveNow Longevity offer?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'LiveNow Longevity offers physician-guided peptide programs including tissue repair peptides, growth hormone peptides, melanocortin peptides, and combination protocols. Weight management medications may also be incorporated as part of a comprehensive program. All protocols are individualized based on medical evaluation.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Who is Dr. Charles Kamen?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Dr. Charles Kamen is a board-certified neurologist by the American Board of Psychiatry and Neurology providing peptide therapy, weight management, NAD+ IV therapy, and regenerative medicine at LiveNow Longevity in Las Vegas, NV.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Does LiveNow Longevity offer telemedicine?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes. Secure telemedicine consultations are available for Nevada residents. Your initial consultation and ongoing management can be conducted remotely for eligible patients.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What conditions may peptide therapy address?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Based on medical evaluation, peptide protocols may be designed to support joint health, body composition, athletic recovery, energy, and general wellness. Individual results vary, and all programs begin with a comprehensive medical evaluation.',
-            },
-          },
-        ],
-      },
-      {
         '@type': 'WebSite',
         '@id': 'https://livenowlongevity.com/#website',
         name: 'LiveNow Longevity',
