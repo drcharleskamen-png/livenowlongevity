@@ -1,7 +1,23 @@
 import type { Metadata } from 'next';
+import { Montserrat, Open_Sans } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import Providers from '@/components/Providers';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import './globals.css';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700', '800', '900'],
+  variable: '--font-montserrat',
+  display: 'swap',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700', '800'],
+  variable: '--font-open-sans',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
  title: {
@@ -29,11 +45,22 @@ export const metadata: Metadata = {
  metadataBase: new URL('https://www.livenowlongevity.com'),
  alternates: {
  canonical: '/',
+ types: {
+ 'application/rss+xml': 'https://www.livenowlongevity.com/feed.xml',
+ },
+ },
+ category: 'Health & Medical',
+ classification: 'Medical Clinic',
+ referrer: 'origin-when-cross-origin',
+ formatDetection: {
+ email: false,
+ address: false,
+ telephone: false,
  },
  openGraph: {
  type: 'website',
  locale: 'en_US',
- url: 'https://livenowlongevity.com',
+ url: 'https://www.livenowlongevity.com',
  siteName: 'LiveNow Longevity',
  title: 'LiveNow Longevity Las Vegas | Physician-Supervised Peptide & Longevity Medicine',
  description: 'Board-certified neurologist Dr. Charles Kamen provides physician-supervised peptide therapy, weight management, NAD+ IV therapy, and regenerative medicine in Las Vegas, NV.',
@@ -43,6 +70,7 @@ export const metadata: Metadata = {
  width: 1200,
  height: 630,
  alt: 'LiveNow Longevity - Physician-supervised wellness in Las Vegas',
+ type: 'image/jpeg',
  },
  ],
  },
@@ -57,14 +85,22 @@ export const metadata: Metadata = {
  robots: {
  index: true,
  follow: true,
+ nocache: false,
  googleBot: {
  index: true,
  follow: true,
  notranslate: true,
+ 'max-snippet': -1,
+ 'max-image-preview': 'large',
+ 'max-video-preview': -1,
  },
  },
- verification: {
- google: 'G-P2KF5QXBF2',
+ other: {
+ 'og:locality': 'Las Vegas',
+ 'og:region': 'NV',
+ 'og:country-name': 'USA',
+ 'medical:disclaimer': 'Content is for educational purposes only and is not medical advice.',
+ 'medical:reviewedBy': 'Charles Kamen, MD',
  },
 };
 
@@ -74,14 +110,8 @@ export default function RootLayout({
  children: React.ReactNode;
 }) {
  return (
- <html lang="en">
+ <html lang="en" className={`${montserrat.variable} ${openSans.variable}`}>
  <head>
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
- <link
- href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&display=swap"
- rel="stylesheet"
- />
  <meta name="geo.region" content="US-NV" />
  <meta name="geo.placename" content="Las Vegas" />
  <meta name="geo.position" content="36.0108;-115.1192" />
@@ -93,6 +123,25 @@ export default function RootLayout({
  <meta name="apple-mobile-web-app-title" content="LiveNow Longevity" />
  <link rel="apple-touch-icon" href="/og-image.jpg" />
  <SchemaMarkup />
+ <script
+   dangerouslySetInnerHTML={{
+     __html: `!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1364160095508189');
+fbq('track', 'PageView');`,
+   }}
+ />
+ <noscript
+   dangerouslySetInnerHTML={{
+     __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1364160095508189&ev=PageView&noscript=1" />`,
+   }}
+ />
  </head>
  <body>
  <Providers>{children}</Providers>
@@ -102,6 +151,7 @@ export default function RootLayout({
    }}
  />
  <script src="https://livenow-chatbot.vercel.app/widget.js?v=5" async />
+ <GoogleAnalytics gaId="G-K065KBPWHF" />
  </body>
  </html>
  );

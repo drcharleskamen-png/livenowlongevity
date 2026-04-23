@@ -24,7 +24,7 @@
 
 .eyebrow {
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -34,7 +34,7 @@
 }
 
 .heroContent h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   color: var(--text-light);
@@ -45,7 +45,7 @@
 }
 
 .heroContent p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: clamp(1rem, 2vw, 1.125rem);
   color: rgba(255,255,255,0.8);
   line-height: 1.7;
@@ -62,7 +62,7 @@
 }
 
 .bioContent p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: clamp(1rem, 2vw, 1.05rem);
   color: rgba(255,255,255,0.7);
   line-height: 1.8;
@@ -103,7 +103,7 @@
 }
 
 .credentialCard h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   color: #ffffff;
@@ -111,7 +111,7 @@
 }
 
 .credentialCard p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.85rem;
   color: rgba(255,255,255,0.6);
 }

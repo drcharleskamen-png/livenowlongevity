@@ -24,7 +24,7 @@
 
 .eyebrow {
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -34,7 +34,7 @@
 }
 
 .heroContent h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   color: var(--text-light);
@@ -45,7 +45,7 @@
 }
 
 .heroContent p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: clamp(1rem, 2vw, 1.125rem);
   color: rgba(255,255,255,0.8);
   line-height: 1.7;
@@ -58,7 +58,7 @@
 }
 
 .introText {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: clamp(1rem, 2vw, 1.1rem);
   color: rgba(255,255,255,0.8);
   line-height: 1.8;
@@ -98,7 +98,7 @@
 }
 
 .benefitCard p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.9rem;
   color: rgba(255,255,255,0.8);
   line-height: 1.6;
@@ -120,7 +120,7 @@
 }
 
 .faqItem h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   color: #ffffff;
@@ -130,7 +130,7 @@
 }
 
 .faqItem p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.9rem;
   color: rgba(255,255,255,0.7);
   line-height: 1.7;
@@ -150,7 +150,7 @@
 }
 
 .relatedLabel {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -162,7 +162,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--primary-accent);

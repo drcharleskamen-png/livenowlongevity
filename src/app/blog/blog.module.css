@@ -24,7 +24,7 @@
 
 .eyebrow {
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -34,7 +34,7 @@
 }
 
 .heroContent h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   color: var(--text-light);
@@ -44,7 +44,7 @@
 }
 
 .heroContent p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: clamp(1rem, 2vw, 1.125rem);
   color: rgba(255,255,255,0.8);
   line-height: 1.7;
@@ -90,7 +90,7 @@
 }
 
 .category {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -99,13 +99,13 @@
 }
 
 .date {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.75rem;
   color: rgba(0,0,0,0.4);
 }
 
 .postCard h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--primary-dark);
@@ -116,7 +116,7 @@
 }
 
 .postCard p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.875rem;
   color: var(--text-secondary);
   line-height: 1.7;
@@ -128,7 +128,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -159,7 +159,7 @@
 }
 
 .articleMeta .category {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -168,13 +168,13 @@
 }
 
 .readTime {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.75rem;
   color: rgba(255,255,255,0.5);
 }
 
 .articleTitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: 800;
   color: #ffffff;
@@ -184,7 +184,7 @@
 }
 
 .articleBody {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 1.0625rem;
   line-height: 1.85;
   color: rgba(255,255,255,0.9);
@@ -206,7 +206,7 @@
 }
 
 .articleSection h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
   color: #ffffff;
@@ -236,7 +236,7 @@
 }
 
 .articleSubsection h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: #ffffff;
@@ -256,7 +256,7 @@
 }
 
 .keyPoints h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -272,7 +272,7 @@
 }
 
 .keyPoints li {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.9rem;
   color: rgba(255,255,255,0.85);
   padding: 0.6rem 0;
@@ -289,7 +289,7 @@
 }
 
 .articleFaq h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
   color: #ffffff;
@@ -307,7 +307,7 @@
 }
 
 .faqItem h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--primary-accent);
@@ -330,7 +330,7 @@
 }
 
 .articleConclusion h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: #ffffff;
@@ -352,7 +352,7 @@
 }
 
 .references h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -367,7 +367,7 @@
 }
 
 .references li {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.8rem;
   color: rgba(255,255,255,0.5);
   line-height: 1.6;
@@ -389,7 +389,7 @@
 }
 
 .sidebarCard h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -409,7 +409,7 @@
 }
 
 .sidebarCard a {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.85rem;
   color: var(--primary-accent);
   text-decoration: none;
@@ -431,7 +431,7 @@
 
 .navPrev,
 .navNext {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   color: rgba(255,255,255,0.9);

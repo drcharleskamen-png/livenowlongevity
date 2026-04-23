@@ -45,7 +45,7 @@
 }
 
 .headline {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: clamp(2rem, 5.5vw, 4rem);
   font-weight: 800;
   color: #ffffff;
@@ -56,7 +56,7 @@
 }
 
 .subheadline {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: clamp(0.95rem, 2vw, 1.125rem);
   color: rgba(255,255,255,0.8);
   line-height: 1.7;
@@ -101,7 +101,7 @@
 }
 
 .badge span {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.04em;

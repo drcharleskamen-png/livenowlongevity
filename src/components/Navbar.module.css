@@ -27,7 +27,7 @@
 }
 
 .brand {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--text-light);
@@ -47,7 +47,7 @@
 }
 
 .navLink {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -67,7 +67,7 @@
 }
 
 .phone {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
   color: var(--text-light);
@@ -104,7 +104,7 @@
 }
 
 .mobileLink {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.05em;
