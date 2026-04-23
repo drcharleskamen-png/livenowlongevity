@@ -95,6 +95,11 @@ export const metadata: Metadata = {
  'max-video-preview': -1,
  },
  },
+ verification: {
+ other: {
+ 'facebook-domain-verification': 'bszxxhih0zgm0laqqbyih603o7uu5q',
+ },
+ },
  other: {
  'og:locality': 'Las Vegas',
  'og:region': 'NV',
