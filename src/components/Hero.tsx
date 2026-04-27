@@ -237,7 +237,10 @@ export default function Hero() {
             Physician-guided care led by Dr. Charles Kamen, MD, board-certified neurologist,
             helping you improve{' '}
             <span className={styles.subAccent}>energy, weight, recovery,</span> and{' '}
-            <span className={styles.subAccent}>long-term health</span>.
+            <span className={styles.subAccent}>long-term health</span>. We focus on{' '}
+            <span className={styles.subAccent}>Longevity</span>, particularly{' '}
+            <span className={styles.subAccent}>NeuroLongevity</span>, and we use peptides
+            as a tool in this quest.
           </motion.p>
 
           <motion.p variants={itemVariants} className={styles.physicianNote}>
