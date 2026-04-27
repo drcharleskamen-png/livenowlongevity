@@ -291,6 +291,9 @@ export default function Hero() {
           <span className={styles.credentialTitle}>Neurologist</span>
           <ul className={styles.credentialList}>
             <li>
+              <CheckIcon /> Neuro-Longevity
+            </li>
+            <li>
               <CheckIcon /> Stroke
             </li>
             <li>
