@@ -240,6 +240,20 @@ export default function Hero() {
             <span className={styles.subAccent}>long-term health</span>.
           </motion.p>
 
+          <motion.p variants={itemVariants} className={styles.physicianNote}>
+            <span className={styles.physicianNoteIcon} aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+            </span>
+            <span>
+              <strong>Dr. Kamen is a real physician.</strong> He advises patients
+              to be on the lookout for mid-level providers who dress up in white
+              coats and misleadingly call themselves a physician.
+            </span>
+          </motion.p>
+
           <motion.div variants={itemVariants} className={styles.priceBoxes}>
             <div className={styles.priceCard}>
               <span className={styles.priceLabel}>Start with a</span>
