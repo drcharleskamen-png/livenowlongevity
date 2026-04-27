@@ -53,6 +53,28 @@
   .spotlight { display: none; }
 }
 
+/* Photo-area spotlight — sits inside the photo frame between the
+   dark backdrop (z-0) and the actual cutout image (z-1). Mix-blend
+   screen so it brightens the backdrop without affecting the photo. */
+.photoSpotlight {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+}
+
+.photoStage:hover .photoSpotlight {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .photoSpotlight { display: none; }
+}
+
 /* Aurora drift — slow ambient lime/cyan blob that floats across the
    negative space behind the hero copy. GPU-accelerated transform-only. */
 .aurora {

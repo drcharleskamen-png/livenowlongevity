@@ -164,6 +164,24 @@ export default function Hero() {
     mouseY.set((e.clientY - rect.top) / rect.height);
   };
 
+  // ---- Photo-area spotlight ----
+  // The section spotlight is covered by the opaque photo backdrop, so we
+  // mount a second spotlight inside the photo frame that tracks the cursor
+  // local to that frame. Screen-blend so it lights the dark backdrop only.
+  const photoMx = useMotionValue(0.5);
+  const photoMy = useMotionValue(0.5);
+  const photoSx = useSpring(photoMx, { stiffness: 90, damping: 22, mass: 0.5 });
+  const photoSy = useSpring(photoMy, { stiffness: 90, damping: 22, mass: 0.5 });
+  const photoSpotX = useTransform(photoSx, (v) => `${v * 100}%`);
+  const photoSpotY = useTransform(photoSy, (v) => `${v * 100}%`);
+
+  const handlePhotoMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (reduceMotion) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    photoMx.set((e.clientX - rect.left) / rect.width);
+    photoMy.set((e.clientY - rect.top) / rect.height);
+  };
+
   return (
     <section ref={ref} className={styles.hero} onMouseMove={handleSectionMouseMove}>
       {/* Cursor-following spotlight — large soft lime/cyan blob behind everything */}
@@ -294,7 +312,7 @@ export default function Hero() {
       </motion.div>
 
       {/* RIGHT — full-bleed photo + floating credential card */}
-      <div className={styles.photoStage}>
+      <div className={styles.photoStage} onMouseMove={handlePhotoMouseMove}>
         <motion.div
           className={styles.photoFrame}
           variants={photoVariants}
@@ -310,6 +328,18 @@ export default function Hero() {
               <span className={styles.watermarkTag}>Physician-Guided Care · Las Vegas</span>
             </div>
           </div>
+          {/* Photo-area cursor spotlight — lights the backdrop, sits below the photo */}
+          <motion.div
+            className={styles.photoSpotlight}
+            style={{
+              background: useTransform(
+                [photoSpotX, photoSpotY] as never,
+                ([px, py]) =>
+                  `radial-gradient(420px circle at ${px} ${py}, rgba(163,237,90,0.32), rgba(108,209,255,0.12) 35%, transparent 70%)`
+              ),
+            }}
+            aria-hidden="true"
+          />
           <Image
             src="/dr-kamen-cutout.png"
             alt="Dr. Charles Kamen, MD — board-certified neurologist and founder of LiveNow Longevity in Las Vegas"
