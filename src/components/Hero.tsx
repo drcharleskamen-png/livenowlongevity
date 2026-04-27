@@ -259,8 +259,17 @@ export default function Hero() {
           initial="hidden"
           animate="show"
         >
+          <div className={styles.photoBackdrop} aria-hidden="true">
+            <div className={styles.backdropWatermark}>
+              <span className={styles.watermarkLive}>LIVE</span>
+              <span className={styles.watermarkNow}>NOW</span>
+              <span className={styles.watermarkLong}>LONGEVITY</span>
+              <span className={styles.watermarkDot}>.COM</span>
+              <span className={styles.watermarkTag}>Physician-Guided Care · Las Vegas</span>
+            </div>
+          </div>
           <Image
-            src="/dr-kamen.png"
+            src="/dr-kamen-cutout.png"
             alt="Dr. Charles Kamen, MD — board-certified neurologist and founder of LiveNow Longevity in Las Vegas"
             fill
             priority
@@ -268,7 +277,6 @@ export default function Hero() {
             className={styles.photo}
           />
           <div className={styles.photoBlendLeft} aria-hidden="true" />
-          <div className={styles.photoBlendBottom} aria-hidden="true" />
         </motion.div>
 
         <motion.div
