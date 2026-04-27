@@ -17,9 +17,9 @@ const navLinks = [
 function DnaLogoMark() {
   return (
     <svg
-      width="40"
-      height="40"
-      viewBox="0 0 40 40"
+      width="42"
+      height="42"
+      viewBox="0 0 42 42"
       fill="none"
       aria-hidden="true"
       className={styles.logoMark}
@@ -27,32 +27,48 @@ function DnaLogoMark() {
       <defs>
         <linearGradient id="navStrandA" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#a3ed5a" />
+          <stop offset="55%" stopColor="#a3ed5a" />
           <stop offset="100%" stopColor="#6cd1ff" />
         </linearGradient>
         <linearGradient id="navStrandB" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#6cd1ff" />
+          <stop offset="45%" stopColor="#a3ed5a" />
           <stop offset="100%" stopColor="#a3ed5a" />
         </linearGradient>
       </defs>
+
+      {/* subtle accent ring container (no fill, just a quiet outline) */}
+      <circle
+        cx="21"
+        cy="21"
+        r="19.5"
+        stroke="rgba(163,237,90,0.18)"
+        strokeWidth="1"
+        fill="none"
+      />
+
+      {/* Left strand — sine-style S, clean curvature, no overshoot */}
       <path
-        d="M10 4 C26 12, 6 20, 22 28 S 6 36, 22 40"
+        d="M14 6 Q26 13 14 21 Q26 29 14 36"
         stroke="url(#navStrandA)"
-        strokeWidth="2"
+        strokeWidth="2.4"
         fill="none"
         strokeLinecap="round"
       />
+
+      {/* Right strand — mirror */}
       <path
-        d="M30 4 C14 12, 34 20, 18 28 S 34 36, 18 40"
+        d="M28 6 Q16 13 28 21 Q16 29 28 36"
         stroke="url(#navStrandB)"
-        strokeWidth="2"
+        strokeWidth="2.4"
         fill="none"
         strokeLinecap="round"
       />
-      <g stroke="#a3ed5a" strokeWidth="1.2" opacity="0.7" strokeLinecap="round">
-        <line x1="13" y1="10" x2="27" y2="10" />
-        <line x1="17" y1="20" x2="23" y2="20" />
-        <line x1="13" y1="30" x2="27" y2="30" />
-      </g>
+
+      {/* Three base-pair bonds at strand crossings */}
+      <line x1="17" y1="13" x2="25" y2="13" stroke="#a3ed5a" strokeWidth="1.5" strokeLinecap="round" opacity="0.9" />
+      <line x1="19" y1="21" x2="23" y2="21" stroke="#a3ed5a" strokeWidth="1.5" strokeLinecap="round" opacity="0.55" />
+      <line x1="17" y1="29" x2="25" y2="29" stroke="#a3ed5a" strokeWidth="1.5" strokeLinecap="round" opacity="0.9" />
     </svg>
   );
 }
@@ -74,12 +90,13 @@ export default function Navbar() {
           <DnaLogoMark />
           <span className={styles.brandText}>
             <span className={styles.brandWordmark}>
-              <span className={styles.brandLive}>LIVE</span>
-              <span className={styles.brandNow}>NOW</span>
-              <span className={styles.brandLongevity}>LONGEVITY</span>
-              <span className={styles.brandDot}>.COM</span>
+              <span className={styles.brandLive}>Live</span>
+              <span className={styles.brandNow}>Now</span>
+              <span className={styles.brandLongevity}>Longevity</span>
             </span>
-            <span className={styles.brandTagline}>Physician-Guided Longevity</span>
+            <span className={styles.brandTagline}>
+              Physician-Guided <span className={styles.tagDot} aria-hidden="true">·</span> Las Vegas
+            </span>
           </span>
         </Link>
 

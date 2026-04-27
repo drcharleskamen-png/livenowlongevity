@@ -29,32 +29,48 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.7rem;
   font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   white-space: nowrap;
   text-decoration: none;
+  transition: opacity 0.2s var(--transition);
+}
+
+.brand:hover {
+  opacity: 0.9;
 }
 
 .logoMark {
   flex-shrink: 0;
-  filter: drop-shadow(0 0 8px rgba(163, 237, 90, 0.45));
+  filter: drop-shadow(0 0 10px rgba(163, 237, 90, 0.32));
+  transition: transform 0.4s var(--transition), filter 0.4s var(--transition);
+}
+
+.brand:hover .logoMark {
+  transform: rotate(-6deg);
+  filter: drop-shadow(0 0 14px rgba(163, 237, 90, 0.55));
 }
 
 .brandText {
   display: flex;
   flex-direction: column;
   line-height: 1;
-  gap: 0.18rem;
+  gap: 0.32rem;
+  /* slim divider on the left edge of the text block to anchor the
+     mark and the wordmark visually */
+  padding-left: 0.2rem;
 }
 
+/* Wordmark: title-case ('Live Now Longevity'), tracked in slightly,
+   no visible TLD. The accent word 'Now' carries the lime weight. */
 .brandWordmark {
   display: flex;
   align-items: baseline;
   gap: 0;
   font-weight: 800;
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
-  color: #ffffff;
+  font-size: 1.18rem;
+  letter-spacing: -0.005em;
+  line-height: 1;
 }
 
 .brandLive {
@@ -63,28 +79,38 @@
 
 .brandNow {
   color: var(--primary-accent);
-  margin-right: 0.05em;
+  font-weight: 900;
+  margin: 0 0.06em;
+  text-shadow: 0 0 18px rgba(163, 237, 90, 0.4);
 }
 
 .brandLongevity {
   color: #ffffff;
 }
 
-.brandDot {
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.85rem;
-  margin-left: 0.05em;
-}
-
+/* Tagline reads as a clean credential line — refined letter-spacing,
+   subdued color so the wordmark stays primary, lime mid-dot separator. */
 .brandTagline {
   font-family: var(--font-montserrat), 'Montserrat', sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15em;
+}
+
+.tagDot {
   color: var(--primary-accent);
-  opacity: 0.85;
+  font-weight: 800;
+  margin: 0 0.25em;
+  letter-spacing: 0;
+  font-size: 1.1em;
+  line-height: 0.5;
+  position: relative;
+  top: -0.05em;
 }
 
 .desktopNav {
@@ -198,13 +224,18 @@
 }
 
 @media (max-width: 480px) {
-  .brandWordmark {
-    font-size: 0.92rem;
+  .brand {
+    gap: 0.55rem;
   }
-  .brandDot {
-    font-size: 0.72rem;
+  .logoMark {
+    width: 36px;
+    height: 36px;
+  }
+  .brandWordmark {
+    font-size: 1rem;
   }
   .brandTagline {
-    font-size: 0.55rem;
+    font-size: 0.52rem;
+    letter-spacing: 0.18em;
   }
 }
