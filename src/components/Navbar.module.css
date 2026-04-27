@@ -47,7 +47,6 @@
 }
 
 .brand:hover .logoMark {
-  transform: rotate(-6deg);
   filter: drop-shadow(0 0 14px rgba(163, 237, 90, 0.55));
 }
 

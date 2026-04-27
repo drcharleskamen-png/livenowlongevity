@@ -12,7 +12,6 @@ import {
 } from 'framer-motion';
 import styles from './Hero.module.css';
 import WordReveal from './effects/WordReveal';
-import CountUp from './effects/CountUp';
 import MagneticButton from './effects/MagneticButton';
 
 const trustBadges = [
@@ -146,9 +145,6 @@ export default function Hero() {
     offset: ['start start', 'end start'],
   });
 
-  // Subtle scroll-driven parallax + zoom on the photo, all guarded by reduce-motion
-  const photoY = useTransform(scrollYProgress, [0, 1], reduceMotion ? [0, 0] : [0, -60]);
-  const photoScale = useTransform(scrollYProgress, [0, 1], reduceMotion ? [1, 1] : [1, 1.04]);
   const glowOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0.3]);
 
   // ---- Cursor spotlight (background) ----
@@ -161,32 +157,11 @@ export default function Hero() {
   const spotlightX = useTransform(sxBg, (v) => `${v * 100}%`);
   const spotlightY = useTransform(syBg, (v) => `${v * 100}%`);
 
-  // ---- 3D photo tilt ----
-  // Photo tilts a few degrees toward the cursor while in the right column.
-  const tiltX = useMotionValue(0);
-  const tiltY = useMotionValue(0);
-  const stx = useSpring(tiltX, { stiffness: 140, damping: 18 });
-  const sty = useSpring(tiltY, { stiffness: 140, damping: 18 });
-  const rotateX = useTransform(sty, [-1, 1], reduceMotion ? [0, 0] : [4, -4]);
-  const rotateY = useTransform(stx, [-1, 1], reduceMotion ? [0, 0] : [-4, 4]);
-
   const handleSectionMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     if (reduceMotion) return;
     const rect = e.currentTarget.getBoundingClientRect();
     mouseX.set((e.clientX - rect.left) / rect.width);
     mouseY.set((e.clientY - rect.top) / rect.height);
-  };
-
-  const handlePhotoMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (reduceMotion) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    tiltX.set(((e.clientX - rect.left) / rect.width) * 2 - 1);
-    tiltY.set(((e.clientY - rect.top) / rect.height) * 2 - 1);
-  };
-
-  const handlePhotoMouseLeave = () => {
-    tiltX.set(0);
-    tiltY.set(0);
   };
 
   return (
@@ -252,7 +227,7 @@ export default function Hero() {
               <span className={styles.priceLabel}>Start with a</span>
               <span className={styles.priceLabelStrong}>Physician Evaluation</span>
               <div className={styles.priceValue}>
-                <CountUp to={89} prefix="$" className={styles.priceAmount} stiffness={70} damping={20} />
+                <span className={styles.priceAmount}>$89</span>
               </div>
               <p className={styles.priceNote}>
                 One-on-one evaluation with Dr. Kamen to review your health and goals.
@@ -265,7 +240,7 @@ export default function Hero() {
             <div className={styles.priceCard}>
               <span className={styles.priceLabel}>Protocols starting at</span>
               <div className={styles.priceValue}>
-                <CountUp to={299} prefix="$" className={styles.priceAmount} stiffness={55} damping={20} />
+                <span className={styles.priceAmount}>$299</span>
                 <span className={styles.pricePeriod}>/month</span>
               </div>
               <p className={styles.priceNote}>Includes:</p>
@@ -319,23 +294,12 @@ export default function Hero() {
       </motion.div>
 
       {/* RIGHT — full-bleed photo + floating credential card */}
-      <motion.div
-        className={styles.photoStage}
-        style={{ y: photoY, scale: photoScale }}
-        onMouseMove={handlePhotoMouseMove}
-        onMouseLeave={handlePhotoMouseLeave}
-      >
+      <div className={styles.photoStage}>
         <motion.div
           className={styles.photoFrame}
           variants={photoVariants}
           initial="hidden"
           animate="show"
-          style={{
-            rotateX,
-            rotateY,
-            transformPerspective: 1100,
-            transformStyle: 'preserve-3d',
-          }}
         >
           <div className={styles.photoBackdrop} aria-hidden="true">
             <div className={styles.backdropWatermark}>
@@ -382,7 +346,7 @@ export default function Hero() {
             </li>
           </ul>
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* BOTTOM — feature pillars span full width */}
       <motion.div
