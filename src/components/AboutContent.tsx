@@ -97,7 +97,7 @@ export default function AboutContent() {
  whileHover={{ y: -4 }}
  >
  <div className={styles.credIcon}>
- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#48c78e" strokeWidth="2">
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a3ed5a" strokeWidth="2">
  <path d="M22 10v6M2 10l10-6 10 6" strokeLinecap="round" strokeLinejoin="round" />
  <path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5" strokeLinecap="round" strokeLinejoin="round" />
  </svg>

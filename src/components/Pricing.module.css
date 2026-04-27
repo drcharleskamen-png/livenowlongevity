@@ -225,7 +225,7 @@
 .period {
   font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .description {
@@ -312,12 +312,12 @@
 
 .infusionNote {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .disclaimer {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.65);
   text-align: center;
   max-width: 720px;
   margin: 0 auto;

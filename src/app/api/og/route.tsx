@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
  flexDirection: 'column',
  alignItems: 'flex-start',
  justifyContent: 'flex-end',
- backgroundColor: '#041212',
+ backgroundColor: '#050a07',
  padding: '60px 80px',
  fontFamily: 'Montserrat, sans-serif',
  }}
@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
  left: 0,
  right: 0,
  height: '8px',
- background: 'linear-gradient(90deg, #48c78e, #4ecdc4)',
+ background: 'linear-gradient(90deg, #a3ed5a, #6cd1ff)',
  }}
  />
 
@@ -44,7 +44,7 @@ export async function GET(request: NextRequest) {
  width: '600px',
  height: '600px',
  borderRadius: '50%',
- background: 'radial-gradient(circle, rgba(72,199,142,0.15) 0%, transparent 70%)',
+ background: 'radial-gradient(circle, rgba(163,237,90,0.18) 0%, transparent 70%)',
  }}
  />
 
@@ -64,12 +64,12 @@ export async function GET(request: NextRequest) {
  width: '44px',
  height: '44px',
  borderRadius: '8px',
- background: 'linear-gradient(135deg, #003131, #004d4d)',
- border: '2px solid #48c78e',
+ background: 'linear-gradient(135deg, #0c1410, #15211a)',
+ border: '2px solid #a3ed5a',
  display: 'flex',
  alignItems: 'center',
  justifyContent: 'center',
- color: '#48c78e',
+ color: '#a3ed5a',
  fontSize: '20px',
  fontWeight: 900,
  }}
@@ -84,7 +84,7 @@ export async function GET(request: NextRequest) {
  letterSpacing: '-0.01em',
  }}
  >
- Live<span style={{ color: '#48c78e' }}>Now</span> Longevity
+ Live<span style={{ color: '#a3ed5a' }}>Now</span> Longevity
  </span>
  </div>
  </div>
@@ -107,7 +107,7 @@ export async function GET(request: NextRequest) {
  style={{
  width: '120px',
  height: '2px',
- background: i % 2 === 0 ? '#48c78e' : '#4ecdc4',
+ background: i % 2 === 0 ? '#a3ed5a' : '#6cd1ff',
  transform: `translateX(${i % 2 === 0 ? '0' : '20px'})`,
  }}
  />
@@ -140,7 +140,7 @@ export async function GET(request: NextRequest) {
  style={{
  fontSize: '22px',
  fontWeight: 400,
- color: 'rgba(255,255,255,0.75)',
+ color: 'rgba(255,255,255,0.82)',
  lineHeight: 1.5,
  maxWidth: '800px',
  }}
@@ -162,14 +162,14 @@ export async function GET(request: NextRequest) {
  width: '8px',
  height: '8px',
  borderRadius: '50%',
- background: '#48c78e',
+ background: '#a3ed5a',
  }}
  />
  <span
  style={{
  fontSize: '18px',
  fontWeight: 600,
- color: '#48c78e',
+ color: '#a3ed5a',
  letterSpacing: '0.05em',
  textTransform: 'uppercase',
  }}
@@ -187,7 +187,7 @@ export async function GET(request: NextRequest) {
  left: 0,
  right: 0,
  height: '4px',
- background: 'linear-gradient(90deg, #48c78e, #4ecdc4, transparent)',
+ background: 'linear-gradient(90deg, #a3ed5a, #6cd1ff, transparent)',
  }}
  />
  </div>

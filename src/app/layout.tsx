@@ -121,7 +121,7 @@ export default function RootLayout({
  <meta name="geo.placename" content="Las Vegas" />
  <meta name="geo.position" content="36.0108;-115.1192" />
  <meta name="ICBM" content="36.0108, -115.1192" />
- <meta name='theme-color' content='#041212' />
+ <meta name='theme-color' content='#050a07' />
  <meta name="mobile-web-app-capable" content="yes" />
  <meta name="apple-mobile-web-app-capable" content="yes" />
  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

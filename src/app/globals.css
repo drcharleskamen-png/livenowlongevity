@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(72, 199, 142, 0.15);
+  box-shadow: 0 20px 40px rgba(163, 237, 90, 0.15);
 }
 
 /* Responsive */

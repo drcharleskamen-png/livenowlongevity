@@ -1,5 +1,5 @@
 .faq {
-  background: #051616;
+  background: #02060a;
   position: relative;
   overflow: hidden;
 }
@@ -12,7 +12,7 @@
   transform: translate(-50%, -50%);
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(72,199,142,0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(163,237,90,0.04) 0%, transparent 70%);
   pointer-events: none;
 }
 

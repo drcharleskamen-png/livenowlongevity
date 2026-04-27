@@ -10,9 +10,9 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 80% at 50% 50%, rgba(72,199,142,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 50% at 20% 80%, rgba(78,205,196,0.08) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 50% at 80% 20%, rgba(72,199,142,0.08) 0%, transparent 50%);
+    radial-gradient(ellipse 70% 80% at 50% 50%, rgba(163,237,90,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 20% 80%, rgba(108,209,255,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 50% at 80% 20%, rgba(163,237,90,0.08) 0%, transparent 50%);
   animation: ctaGlow 8s ease-in-out infinite alternate;
   pointer-events: none;
 }
@@ -38,7 +38,7 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 30px rgba(72,199,142,0.2);
+  text-shadow: 0 2px 30px rgba(163,237,90,0.2);
 }
 
 .content p {
@@ -52,5 +52,5 @@
 .ctaBtn {
   font-size: 0.9rem;
   padding: 1.1rem 3rem;
-  box-shadow: 0 4px 32px rgba(72, 199, 142, 0.45), 0 0 0 1px rgba(72,199,142,0.15);
+  box-shadow: 0 4px 32px rgba(163, 237, 90, 0.45), 0 0 0 1px rgba(163,237,90,0.15);
 }

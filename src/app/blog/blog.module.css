@@ -12,7 +12,7 @@
 .heroBg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 80%, rgba(72,199,142,0.12) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 80%, rgba(163,237,90,0.12) 0%, transparent 60%);
 }
 
 .heroContent {
@@ -73,8 +73,8 @@
 
 .postCard:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(72,199,142,0.12);
-  border-color: rgba(72,199,142,0.3);
+  box-shadow: 0 20px 40px rgba(163,237,90,0.12);
+  border-color: rgba(163,237,90,0.3);
 }
 
 .postCard:hover .readMore {
@@ -170,7 +170,7 @@
 .readTime {
   font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.72);
 }
 
 .articleTitle {
@@ -324,7 +324,7 @@
 .articleConclusion {
   margin: 2.5rem 0;
   padding: 2rem;
-  background: rgba(72,199,142,0.06);
+  background: rgba(163,237,90,0.06);
   border-radius: var(--radius-md);
   border-left: 4px solid var(--primary-accent);
 }
@@ -369,7 +369,7 @@
 .references li {
   font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.72);
   line-height: 1.6;
   margin-bottom: 0.5rem;
 }

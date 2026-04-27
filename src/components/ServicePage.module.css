@@ -12,7 +12,7 @@
 .heroBg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 80%, rgba(72,199,142,0.12) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 80%, rgba(163,237,90,0.12) 0%, transparent 60%);
 }
 
 .heroContent {
@@ -66,7 +66,7 @@
 }
 
 .benefits {
-  background: #062018;
+  background: #0c1410;
 }
 
 .benefitsGrid {
@@ -90,7 +90,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(72,199,142,0.1);
+  background: rgba(163,237,90,0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,7 +155,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.72);
 }
 
 .relatedLink {

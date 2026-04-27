@@ -14,7 +14,7 @@ export default function ClinicSection() {
           transition={{ duration: 0.7 }}
         >
           <div className={styles.iconWrapper}>
-            <MapPin size={24} color="#48c78e" />
+            <MapPin size={24} color="#a3ed5a" />
           </div>
           <div>
             <h3 className={styles.title}>Visit Our Las Vegas Clinic</h3>

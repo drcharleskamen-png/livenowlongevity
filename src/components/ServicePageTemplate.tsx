@@ -96,7 +96,7 @@ export default function ServicePageTemplate({
               >
                 <div className={styles.checkIcon}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M20 6L9 17l-5-5" stroke="#48c78e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M20 6L9 17l-5-5" stroke="#a3ed5a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 <p>{benefit}</p>
