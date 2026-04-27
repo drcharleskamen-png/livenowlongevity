@@ -54,11 +54,20 @@ export default function ClinicSlider() {
             <motion.div
               key={currentIndex}
               className={styles.slide}
-              initial={{ opacity: 0, scale: 1.1 }}
+              initial={{ opacity: 0, scale: 1.04 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
             >
+              {/* Blurred duplicate fills the container so portraits and landscapes
+                  both display fully without crop. The same image is shown again
+                  on top with object-fit: contain. */}
+              <img
+                src={clinicImages[currentIndex]}
+                alt=""
+                aria-hidden="true"
+                className={styles.imageBackdrop}
+              />
               <img
                 src={clinicImages[currentIndex]}
                 alt={`Clinic photo ${currentIndex + 1}`}
