@@ -246,12 +246,12 @@ export default function Hero() {
               <span className={styles.priceLabelStrong}>Physician Evaluation</span>
               <div className={styles.priceValue}>
                 <span className={styles.priceAmount}>$89</span>
+                <span className={styles.priceCredit}>
+                  <CheckIcon /> Applied toward your protocol if you continue care.
+                </span>
               </div>
               <p className={styles.priceNote}>
                 One-on-one evaluation with Dr. Kamen to review your health and goals.
-              </p>
-              <p className={styles.priceCredit}>
-                <CheckIcon /> Applied toward your protocol if you continue care.
               </p>
             </div>
 

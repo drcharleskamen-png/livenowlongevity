@@ -257,24 +257,33 @@
   margin: 0.35rem 0 0;
 }
 
-/* Credit line under the $89 evaluation — small, lime accent, indicates
-   the consult fee is applied toward ongoing protocol pricing. */
+/* Credit line — sits inline next to the $89 amount, vertically centered
+   to the price. Small lime text wraps to ~2 lines beside the big number. */
 .priceCredit {
-  display: flex;
+  display: inline-flex;
   align-items: flex-start;
-  gap: 0.4rem;
-  font-size: 0.78rem;
+  gap: 0.3rem;
+  flex: 1;
+  min-width: 0;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--primary-accent);
-  line-height: 1.45;
-  margin: 0.6rem 0 0;
-  padding-top: 0.6rem;
-  border-top: 1px solid var(--border-accent);
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  text-align: left;
+  align-self: center;
+  padding-bottom: 0.25rem;
 }
 
 .priceCredit svg {
   flex-shrink: 0;
   margin-top: 2px;
+}
+
+/* Make .priceValue a row with the credit line aligned to the price's right */
+.priceValue {
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
 }
 
 .priceFeatures {
