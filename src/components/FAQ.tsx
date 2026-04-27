@@ -14,11 +14,11 @@ export const faqs = [
  },
  {
  q: 'How much does peptide therapy cost?',
- a: 'Our peptide therapy programs start at $299/month as part of our Essential Optimization tier. Pricing varies based on your individualized treatment plan. We offer multiple tiers and a la carte IV therapy options. All costs are strictly for physician monitoring — we do not sell medications or peptides.',
+ a: 'Our peptide therapy protocols start at $299/month as part of our Essential Optimization tier. Pricing varies based on your individualized treatment plan. We offer multiple tiers and a la carte IV therapy options. All costs are strictly for physician monitoring — we do not sell medications or peptides.',
  },
  {
  q: 'What peptides do you offer?',
- a: 'We offer a range of physician-guided peptide programs including tissue repair peptide protocols, dual-action weight medication (weight management medication), weight management medication, melanocortin peptide protocols, and more. The right peptide protocol for you depends on your lab results and health goals — determined during your consultation.',
+ a: 'We offer a range of physician-guided peptide protocols including tissue repair peptide protocols, dual-action weight medication (weight management medication), weight management medication, melanocortin peptide protocols, and more. The right peptide protocol for you depends on your lab results and health goals — determined during your consultation.',
  },
  {
  q: 'Do I need to visit in person?',

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 const service = {
  title: 'Peptide Therapy',
- heroSubtitle: 'Physician-guided peptide programs designed to restore, repair, and optimize your body at the cellular level.',
+ heroSubtitle: 'Physician-guided peptide protocols designed to restore, repair, and optimize your body at the cellular level.',
  intro: `Peptide therapy is available to Green Valley and Henderson residents through LiveNow Longevity. Dr. Charles Kamen, MD — a board-certified neurologist by the American Board of Psychiatry and Neurology — designs every peptide protocol after comprehensive medical evaluation.
 
 Our clinic serves patients throughout Green Valley, Henderson, and the eastern Las Vegas valley, including residents near the District at Green Valley Ranch, Galleria at Sunset, and the Green Valley Ranch Resort. Peptides are sourced from licensed American compounding pharmacies (503A/503B) that conduct third-party testing on every batch.
@@ -51,15 +51,15 @@ Peptide therapy is available via secure telemedicine for Nevada residents.`,
   'Growth hormone-releasing peptides for growth hormone optimization',
   'Growth hormone secretagogues for growth hormone stimulation and body composition support',
   'Available via telemedicine for Nevada residents',
-  'Ongoing monitoring with protocol adjustments throughout your program',
-  'Can be integrated with other wellness programs including NAD+ and hormone optimization',
+  'Ongoing monitoring with protocol adjustments throughout your protocol',
+  'Can be integrated with other wellness protocols including NAD+ and hormone optimization',
  ],
  faqs: [
   { q: 'Is peptide therapy available in Green Valley and Henderson?', a: 'Yes. Dr. Kamen provides peptide therapy to Green Valley and Henderson residents through LiveNow Longevity. Initial consultations are available in-person at our Las Vegas clinic or via secure telemedicine for Nevada residents.' },
   { q: 'How does peptide therapy work?', a: 'Peptides are short sequences of amino acids that bind to specific receptors in your body, triggering targeted biological responses. Peptides work by mimicking or amplifying natural signaling pathways.' },
-  { q: 'Is peptide therapy safe?', a: 'When prescribed and supervised by a licensed physician who orders medical evaluation and monitors progress, peptide therapy may be appropriate for many patients. Dr. Kamen monitors all patients throughout their treatment program and adjusts protocols based on follow-up and symptom response.' },
+  { q: 'Is peptide therapy safe?', a: 'When prescribed and supervised by a licensed physician who orders medical evaluation and monitors progress, peptide therapy may be appropriate for many patients. Dr. Kamen monitors all patients throughout their treatment protocol and adjusts protocols based on follow-up and symptom response.' },
   { q: 'Do I need labs before starting peptide therapy?', a: 'Medical evaluation including lab work is required before any peptide protocol. This helps ensure the protocol is appropriate for your individual health profile.' },
-  { q: 'How long before I notice changes?', a: 'Individual response varies. Some patients may notice changes within 3–6 weeks. Results depend on the specific peptide protocol, individual health factors, and adherence to the recommended program.' },
+  { q: 'How long before I notice changes?', a: 'Individual response varies. Some patients may notice changes within 3–6 weeks. Results depend on the specific peptide protocol, individual health factors, and adherence to the recommended protocol.' },
   { q: 'What areas of Green Valley and Henderson do you serve?', a: 'We serve patients throughout Green Valley, Henderson, Seven Hills, and the eastern Las Vegas valley including the District at Green Valley Ranch, Galleria at Sunset, and surrounding communities. Telemedicine is available for Nevada residents.' },
  ],
  relatedService: { title: 'Weight Management', href: '/services/weight-management' },

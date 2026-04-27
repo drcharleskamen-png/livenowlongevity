@@ -189,7 +189,7 @@ const posts: Record<string, {
  },
  'epigenetic-age-testing': {
  title: 'Epigenetic Age Testing: Measuring Biological Age | Dr. Charles Kamen, MD',
- description: 'Epigenetic clocks like GrimAge measure biological age through DNA methylation. Dr. Charles Kamen, MD explains what epigenetic testing shows, its limitations, and how it fits into a longevity medicine program.',
+ description: 'Epigenetic clocks like GrimAge measure biological age through DNA methylation. Dr. Charles Kamen, MD explains what epigenetic testing shows, its limitations, and how it fits into a longevity medicine protocol.',
  keywords: 'epigenetic age testing, GrimAge, biological age test, DNA methylation aging, Dr. Charles Kamen epigenetic',
  author: 'Dr. Charles Kamen, MD',
  date: '2026-02-10',

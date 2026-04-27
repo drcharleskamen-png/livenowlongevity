@@ -73,19 +73,46 @@
   line-height: 1;
 }
 
+/* Live: lime accent + slight glow — the action verb leads the brand */
 .brandLive {
-  color: #ffffff;
-}
-
-.brandNow {
   color: var(--primary-accent);
   font-weight: 900;
-  margin: 0 0.06em;
   text-shadow: 0 0 18px rgba(163, 237, 90, 0.4);
+}
+
+/* Now: clean white anchor */
+.brandNow {
+  color: #ffffff;
+  font-weight: 800;
+  margin: 0 0.08em;
 }
 
 .brandLongevity {
   color: #ffffff;
+  font-weight: 700;
+  /* slimmer weight on the long word balances the heavy 'Live' lead */
+  opacity: 0.92;
+}
+
+/* subtle hairline separator between mark and wordmark */
+.brandText::before {
+  content: '';
+  position: absolute;
+  left: -0.55rem;
+  top: 8%;
+  bottom: 8%;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(163, 237, 90, 0.45) 35%,
+    rgba(163, 237, 90, 0.45) 65%,
+    transparent 100%
+  );
+}
+
+.brandText {
+  position: relative;
 }
 
 /* Tagline reads as a clean credential line — refined letter-spacing,

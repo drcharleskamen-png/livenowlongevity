@@ -72,7 +72,7 @@ const posts: Record<string, Post> = {
  'Observed mechanisms include growth hormone modulation, nitric oxide signaling, and angiogenesis',
  'Dosing in humans is extrapolated from animal data — pharmacokinetics in humans are not established',
  'Product quality varies significantly; sourcing from licensed 503A/503B pharmacies is essential',
- 'tissue repair peptide protocols is available through physician-supervised programs at LiveNow Longevity',
+ 'tissue repair peptide protocols is available through physician-supervised protocols at LiveNow Longevity',
  ],
  },
  {
@@ -81,7 +81,7 @@ const posts: Record<string, Post> = {
  faqs: [
  {
  q: 'Can I get tissue repair peptide protocols through LiveNow Longevity?',
- a: 'Yes. Dr. Kamen offers tissue repair peptide protocols as part of our peptide therapy programs. All patients undergo a thorough history and physical evaluation to determine candidacy. Book a consultation at livenowlongevity.com.',
+ a: 'Yes. Dr. Kamen offers tissue repair peptide protocols as part of our peptide therapy protocols. All patients undergo a thorough history and physical evaluation to determine candidacy. Book a consultation at livenowlongevity.com.',
  },
  {
  q: 'Is tissue repair peptide protocols legal?',
@@ -99,7 +99,7 @@ const posts: Record<string, Post> = {
  },
  {
  type: 'conclusion',
- content: `tissue repair peptide protocols represents one of the most studied peptides in the regenerative medicine literature. While the preclinical (animal) data are extensive and often compelling, the translation to human outcomes remains incompletely characterized. Patients interested in tissue repair peptide protocols therapy should seek a physician who can provide evidence-based guidance on whether it is appropriate for their individual situation.\n\nAt LiveNow Longevity, Dr. Kamen conducts thorough evaluation before recommending any peptide protocol. <Link href="/services/peptide-therapy" class="${styles.inlineLink}">Learn more about our peptide therapy programs</Link> or <Link href="/contact" class="${styles.inlineLink}">schedule a consultation</Link>.`,
+ content: `tissue repair peptide protocols represents one of the most studied peptides in the regenerative medicine literature. While the preclinical (animal) data are extensive and often compelling, the translation to human outcomes remains incompletely characterized. Patients interested in tissue repair peptide protocols therapy should seek a physician who can provide evidence-based guidance on whether it is appropriate for their individual situation.\n\nAt LiveNow Longevity, Dr. Kamen conducts thorough evaluation before recommending any peptide protocol. <Link href="/services/peptide-therapy" class="${styles.inlineLink}">Learn more about our peptide therapy protocols</Link> or <Link href="/contact" class="${styles.inlineLink}">schedule a consultation</Link>.`,
  },
  {
  type: 'references',
@@ -149,7 +149,7 @@ const posts: Record<string, Post> = {
  points: [
  '<b>lipolytic peptide protocols</b>: A fragment of human growth hormone (hGH 177-191) studied for lipolytic (fat-burning) activity. No FDA approval; available through compounding pharmacies. <sup class="${styles.ref}">[5]</sup>',
  '<b>5-Amino-1MQ</b>: A small molecule that inhibits methionine aminopeptidase 2 (MetAP2), reducing fat accumulation in preclinical models. Early human data are promising but limited. <sup class="${styles.ref}">[6]</sup>',
- '<b>weight management medication</b> (when used as part of a peptide program): Same molecule as a single-action medication, but may be combined with other peptides in customized protocols.',
+ '<b>weight management medication</b> (when used as part of a peptide protocol): Same molecule as a single-action medication, but may be combined with other peptides in customized protocols.',
  '<b>growth hormone secretagogue protocols / growth hormone secretagogue protocols</b>: Growth hormone secretagogues used to support lean body mass preservation during caloric restriction. <sup class="${styles.ref}">[7]</sup>',
  ],
  },
@@ -176,7 +176,7 @@ const posts: Record<string, Post> = {
  'Peptide protocols offer multi-pathway support but are not FDA-approved for weight loss',
  'Peptide protocols may be preferable for patients seeking to avoid pharmaceutical weight management medication agents or who have plateaued on them',
  'Both approaches require physician supervision — self-administration is not safe',
- 'Dr. Kamen designs individualized weight management programs combining the most appropriate tools for each patient',
+ 'Dr. Kamen designs individualized weight management protocols combining the most appropriate tools for each patient',
  ],
  },
  {
@@ -199,7 +199,7 @@ const posts: Record<string, Post> = {
  },
  {
  type: 'conclusion',
- content: `Both weight management medications and peptide protocols represent legitimate tools in a comprehensive weight management program. The right choice depends on your medical history, weight loss goals, and response to treatment. <Link href="/services/weight-management" class="${styles.inlineLink}">Explore our weight management programs</Link> or <Link href="/contact" class="${styles.inlineLink}">schedule a consultation</Link> with Dr. Kamen to discuss your options.`,
+ content: `Both weight management medications and peptide protocols represent legitimate tools in a comprehensive weight management protocol. The right choice depends on your medical history, weight loss goals, and response to treatment. <Link href="/services/weight-management" class="${styles.inlineLink}">Explore our weight management protocols</Link> or <Link href="/contact" class="${styles.inlineLink}">schedule a consultation</Link> with Dr. Kamen to discuss your options.`,
  },
  {
  type: 'references',
@@ -256,7 +256,7 @@ const posts: Record<string, Post> = {
  'NAD+ declines ~50% between ages 40-60, affecting mitochondrial function, DNA repair, and cellular signaling',
  'Preclinical evidence strongly supports NAD+ restoration for healthspan; human trials are ongoing',
  'IV NAD+ and oral NMN/NR are both viable approaches with different risk/benefit profiles',
- 'NAD+ IV therapy is available at LiveNow Longevity as part of our IV therapy programs',
+ 'NAD+ IV therapy is available at LiveNow Longevity as part of our IV therapy protocols',
  'Comprehensive biomarker testing (available through our longevity labs) can help assess your NAD+ status',
  ],
  },
@@ -284,7 +284,7 @@ const posts: Record<string, Post> = {
  },
  {
  type: 'conclusion',
- content: `NAD+ restoration represents one of the most scientifically grounded longevity interventions available today. While the field is still evolving, the preclinical data are compelling, and early human trials are encouraging. <Link href="/services/nad-therapy" class="${styles.inlineLink}">Learn about our NAD+ therapy programs</Link> or <Link href="/contact" class="${styles.inlineLink}">schedule a consultation</Link> to discuss whether NAD+ is right for you.`,
+ content: `NAD+ restoration represents one of the most scientifically grounded longevity interventions available today. While the field is still evolving, the preclinical data are compelling, and early human trials are encouraging. <Link href="/services/nad-therapy" class="${styles.inlineLink}">Learn about our NAD+ therapy protocols</Link> or <Link href="/contact" class="${styles.inlineLink}">schedule a consultation</Link> to discuss whether NAD+ is right for you.`,
  },
  {
  type: 'references',
@@ -368,7 +368,7 @@ const posts: Record<string, Post> = {
  },
  {
  type: 'conclusion',
- content: `Telemedicine has made physician-supervised peptide therapy more accessible than ever for Nevada residents. If you\'re interested in exploring peptide protocols, <Link href="/contact" class="${styles.inlineLink}">schedule a telemedicine consultation</Link> with Dr. Kamen. Learn more about <Link href="/services/peptide-therapy" class="${styles.inlineLink}">our peptide therapy programs</Link>.`,
+ content: `Telemedicine has made physician-supervised peptide therapy more accessible than ever for Nevada residents. If you\'re interested in exploring peptide protocols, <Link href="/contact" class="${styles.inlineLink}">schedule a telemedicine consultation</Link> with Dr. Kamen. Learn more about <Link href="/services/peptide-therapy" class="${styles.inlineLink}">our peptide therapy protocols</Link>.`,
  },
  {
  type: 'references',
@@ -389,7 +389,7 @@ const posts: Record<string, Post> = {
  content: [
  {
  type: 'intro',
- content: `A comprehensive longevity lab panel is the foundation of any evidence-based longevity medicine program. But most people have no idea what to ask for, what the numbers mean, or how to interpret them in context. Dr. Kamen walks you through the key biomarkers, what optimal ranges look like, and how to use your results to guide interventions.`,
+ content: `A comprehensive longevity lab panel is the foundation of any evidence-based longevity medicine protocol. But most people have no idea what to ask for, what the numbers mean, or how to interpret them in context. Dr. Kamen walks you through the key biomarkers, what optimal ranges look like, and how to use your results to guide interventions.`,
  },
  {
  type: 'h2',
@@ -439,7 +439,7 @@ const posts: Record<string, Post> = {
  faqs: [
  {
  q: 'How often should I get longevity labs done?',
- a: 'Dr. Kamen typically recommends comprehensive labs annually, with key metabolic and inflammatory markers checked every 6 months during active optimization programs.',
+ a: 'Dr. Kamen typically recommends comprehensive labs annually, with key metabolic and inflammatory markers checked every 6 months during active optimization protocols.',
  },
  {
  q: 'Will insurance cover longevity lab panels?',
@@ -451,13 +451,13 @@ const posts: Record<string, Post> = {
  },
  {
  q: 'What is DEXA scan for body composition?',
- a: 'DEXA (dual-energy X-ray absorptiometry) provides precise measurement of visceral fat, lean mass, and bone density — far more accurate than BIA scales or BMI alone. It is used to track changes over time during longevity programs.',
+ a: 'DEXA (dual-energy X-ray absorptiometry) provides precise measurement of visceral fat, lean mass, and bone density — far more accurate than BIA scales or BMI alone. It is used to track changes over time during longevity protocols.',
  },
  ],
  },
  {
  type: 'conclusion',
- content: `Understanding your biomarkers is the first step to optimizing them. <Link href="/contact" class="${styles.inlineLink}">Schedule a consultation</Link> to discuss comprehensive longevity lab testing, or <Link href="/services/longevity-medicine" class="${styles.inlineLink}">learn more about our longevity medicine programs</Link>.`,
+ content: `Understanding your biomarkers is the first step to optimizing them. <Link href="/contact" class="${styles.inlineLink}">Schedule a consultation</Link> to discuss comprehensive longevity lab testing, or <Link href="/services/longevity-medicine" class="${styles.inlineLink}">learn more about our longevity medicine protocols</Link>.`,
  },
  {
  type: 'references',
@@ -520,7 +520,7 @@ const posts: Record<string, Post> = {
  'Most peptides are not scheduled controlled substances — they are not illegal under the CSA',
  'Compounded peptides from licensed U.S. pharmacies with a valid prescription are lawful',
  'Nevada physicians may prescribe peptides when a legitimate medical indication exists',
- 'The risk to patients comes from unregulated gray-market sources, not physician-supervised programs',
+ 'The risk to patients comes from unregulated gray-market sources, not physician-supervised protocols',
  'All peptides at LiveNow Longevity are prescribed legally through licensed pharmacies',
  ],
  },
@@ -775,7 +775,7 @@ const posts: Record<string, Post> = {
  {
  type: 'h2',
  title: 'Managing Caloric Reduction',
- content: `weight management medication therapy naturally reduces caloric intake through appetite suppression. However, overly aggressive calorie restriction can cause muscle loss, nutrient deficiencies, and metabolic adaptation. <sup class="${styles.ref}">[2]</sup>\n\nWork with Dr. Kamen to establish appropriate caloric targets. Our Las Vegas clinic offers nutritional counseling as part of comprehensive weight management programs.`,
+ content: `weight management medication therapy naturally reduces caloric intake through appetite suppression. However, overly aggressive calorie restriction can cause muscle loss, nutrient deficiencies, and metabolic adaptation. <sup class="${styles.ref}">[2]</sup>\n\nWork with Dr. Kamen to establish appropriate caloric targets. Our Las Vegas clinic offers nutritional counseling as part of comprehensive weight management protocols.`,
  },
  {
  type: 'h2',
@@ -846,7 +846,7 @@ const posts: Record<string, Post> = {
  },
  {
  q: 'Will I lose muscle on weight management medication therapy?',
- a: 'Adequate protein intake and resistance exercise help preserve lean mass. Dr. Kamen monitors body composition as part of your weight management program.',
+ a: 'Adequate protein intake and resistance exercise help preserve lean mass. Dr. Kamen monitors body composition as part of your weight management protocol.',
  },
  {
  q: 'What about meal replacement shakes?',
@@ -927,7 +927,7 @@ const posts: Record<string, Post> = {
  'Resistance training 3-4x weekly is the most effective muscle preservation stimulus',
  'Sleep, gradual caloric reduction, and proper hydration support the process',
  'Peptide therapy may be clinically appropriate as an adjunct support',
- 'Dr. Kamen monitors body composition throughout your program',
+ 'Dr. Kamen monitors body composition throughout your protocol',
  ],
  },
  {
@@ -1036,7 +1036,7 @@ const posts: Record<string, Post> = {
  'Plateaus often indicate metabolic adaptation has balanced caloric deficit',
  'Strategic approaches can reset metabolic rate and break plateaus',
  'Clinical supervision optimizes adaptation management',
- 'Dr. Kamen monitors metabolic markers throughout your program',
+ 'Dr. Kamen monitors metabolic markers throughout your protocol',
  ],
  },
  {
@@ -2748,7 +2748,7 @@ const posts: Record<string, Post> = {
  content: [
  {
  type: 'intro',
- content: `growth hormone secretagogue protocols are growth hormone-releasing peptides frequently used in combination protocols. Dr. Charles Kamen, MD, board-certified neurologist at LiveNow Longevity in Las Vegas, offers these peptides as part of comprehensive peptide therapy programs. Individual results vary.`,
+ content: `growth hormone secretagogue protocols are growth hormone-releasing peptides frequently used in combination protocols. Dr. Charles Kamen, MD, board-certified neurologist at LiveNow Longevity in Las Vegas, offers these peptides as part of comprehensive peptide therapy protocols. Individual results vary.`,
  },
  {
  type: 'h2',
@@ -2851,7 +2851,7 @@ const posts: Record<string, Post> = {
  content: [
  {
  type: 'intro',
- content: `melanocortin peptide protocols (Bremelanotide) is a peptide that affects sexual function and arousal through melanocortin pathways. Dr. Charles Kamen, MD, board-certified neurologist at LiveNow Longevity in Las Vegas, offers melanocortin peptide protocols therapy as part of comprehensive peptide programs. Individual results vary.`,
+ content: `melanocortin peptide protocols (Bremelanotide) is a peptide that affects sexual function and arousal through melanocortin pathways. Dr. Charles Kamen, MD, board-certified neurologist at LiveNow Longevity in Las Vegas, offers melanocortin peptide protocols therapy as part of comprehensive peptide protocols. Individual results vary.`,
  },
  {
  type: 'h2',
@@ -3058,7 +3058,7 @@ const posts: Record<string, Post> = {
  content: [
  {
  type: 'intro',
- content: `lipolytic peptide protocols is a peptide fragment used primarily for its potential fat-loss effects. Dr. Charles Kamen, MD, board-certified neurologist at LiveNow Longevity in Las Vegas, offers lipolytic peptide protocols as part of comprehensive weight management programs. Individual results vary.`,
+ content: `lipolytic peptide protocols is a peptide fragment used primarily for its potential fat-loss effects. Dr. Charles Kamen, MD, board-certified neurologist at LiveNow Longevity in Las Vegas, offers lipolytic peptide protocols as part of comprehensive weight management protocols. Individual results vary.`,
  },
  {
  type: 'h2',
@@ -3100,7 +3100,7 @@ const posts: Record<string, Post> = {
  'May support fat loss when combined with diet and exercise',
  'Evidence base is less extensive than weight management medication medications',
  'Administered via subcutaneous injection',
- 'Dr. Kamen uses lipolytic peptide protocols as part of comprehensive weight management programs',
+ 'Dr. Kamen uses lipolytic peptide protocols as part of comprehensive weight management protocols',
  ],
  },
  {
@@ -3135,7 +3135,7 @@ const posts: Record<string, Post> = {
  },
  {
  type: 'conclusion',
- content: `lipolytic peptide protocols may support fat loss as part of a comprehensive weight management program. <Link href="/services/weight-management" class="${styles.inlineLink}">Discuss lipolytic peptide protocols with Dr. Kamen</Link> to determine whether it fits your treatment plan.`,
+ content: `lipolytic peptide protocols may support fat loss as part of a comprehensive weight management protocol. <Link href="/services/weight-management" class="${styles.inlineLink}">Discuss lipolytic peptide protocols with Dr. Kamen</Link> to determine whether it fits your treatment plan.`,
  },
  {
  type: 'references',

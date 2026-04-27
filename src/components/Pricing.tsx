@@ -98,10 +98,10 @@ export default function Pricing() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2>Programs &amp; Pricing</h2>
+          <h2>Protocols &amp; Pricing</h2>
           <p>
             Transparent, physician-supervised care at every level. Begin with a $89 evaluation —
-            no commitment to ongoing programs.
+            no commitment to ongoing protocols.
           </p>
         </motion.div>
 
@@ -144,7 +144,7 @@ export default function Pricing() {
         </motion.div>
 
         <div className={styles.tierEyebrow}>
-          <span>Ongoing Programs</span>
+          <span>Ongoing Protocols</span>
         </div>
 
         <div className={styles.tiers}>
@@ -206,8 +206,8 @@ export default function Pricing() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          All programs begin with the $89 physician evaluation. Individualized plans may include
-          multiple therapies. All program fees are strictly for physician monitoring and oversight —
+          All protocols begin with the $89 physician evaluation. Individualized plans may include
+          multiple therapies. All protocol fees are strictly for physician monitoring and oversight —
           we do not sell medications or peptides.
         </motion.p>
       </div>

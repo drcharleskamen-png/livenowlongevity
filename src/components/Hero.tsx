@@ -189,10 +189,13 @@ export default function Hero() {
               <p className={styles.priceNote}>
                 One-on-one evaluation with Dr. Kamen to review your health and goals.
               </p>
+              <p className={styles.priceCredit}>
+                <CheckIcon /> Applied toward your protocol if you continue care.
+              </p>
             </div>
 
             <div className={styles.priceCard}>
-              <span className={styles.priceLabel}>Programs starting at</span>
+              <span className={styles.priceLabel}>Protocols starting at</span>
               <div className={styles.priceValue}>
                 <span className={styles.priceAmount}>$299</span>
                 <span className={styles.pricePeriod}>/month</span>
@@ -231,7 +234,7 @@ export default function Hero() {
               whileTap={{ scale: 0.97 }}
               transition={{ type: 'spring', stiffness: 400, damping: 17 }}
             >
-              View Programs
+              View Protocols
             </motion.a>
           </motion.div>
 

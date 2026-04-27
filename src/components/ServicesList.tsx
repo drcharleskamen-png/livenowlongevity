@@ -6,7 +6,7 @@ import styles from '../Services.module.css';
 const services = [
  {
  title: 'Peptide Therapy',
- description: 'Physician-guided peptide programs for recovery, athletic performance, and overall wellness.',
+ description: 'Physician-guided peptide protocols for recovery, athletic performance, and overall wellness.',
  href: '/services/peptide-therapy',
  icon: (
  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -16,7 +16,7 @@ const services = [
  },
  {
  title: 'Weight Management',
- description: 'Medical weight management programs with physician-guided metabolic and weight management medication support.',
+ description: 'Medical weight management protocols with physician-guided metabolic and weight management medication support.',
  href: '/services/weight-management',
  icon: (
  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -37,7 +37,7 @@ const services = [
  },
  {
  title: 'Longevity Medicine',
- description: 'Evidence-based longevity programs with biomarker tracking and anti-aging protocols.',
+ description: 'Evidence-based longevity protocols with biomarker tracking and anti-aging protocols.',
  href: '/services/longevity-medicine',
  icon: (
  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -47,7 +47,7 @@ const services = [
  },
  {
  title: 'Regenerative Medicine',
- description: 'Physician-guided regenerative programs for restoring health, energy, and vitality.',
+ description: 'Physician-guided regenerative protocols for restoring health, energy, and vitality.',
  href: '/services/regenerative-medicine',
  icon: (
  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
  title: 'Longevity Medicine Las Vegas | Dr. Charles Kamen MD | LiveNow Longevity',
- description: 'Longevity medicine programs by board-certified neurologist Dr. Charles Kamen, MD in Las Vegas. Biomarker tracking, wellness protocols, and comprehensive health evaluation.',
+ description: 'Longevity medicine protocols by board-certified neurologist Dr. Charles Kamen, MD in Las Vegas. Biomarker tracking, wellness protocols, and comprehensive health evaluation.',
  keywords: 'longevity medicine Las Vegas, longevity doctor Las Vegas, anti-aging medicine Las Vegas, healthspan optimization Nevada, Dr. Charles Kamen longevity',
  authors: [{ name: 'Dr. Charles Kamen, MD' }],
  alternates: {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
  },
  openGraph: {
  title: 'Longevity Medicine Las Vegas | Dr. Charles Kamen, MD | LiveNow Longevity',
- description: 'Longevity medicine programs by board-certified neurologist Dr. Charles Kamen, MD in Las Vegas. Biomarker tracking, wellness protocols, and comprehensive health evaluation.',
+ description: 'Longevity medicine protocols by board-certified neurologist Dr. Charles Kamen, MD in Las Vegas. Biomarker tracking, wellness protocols, and comprehensive health evaluation.',
  url: 'https://livenowlongevity.com/services/longevity-medicine',
  siteName: 'LiveNow Longevity',
  type: 'website',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
  site: '@livenow_longevity',
  creator: '@livenow_longevity',
  title: 'Longevity Medicine Las Vegas | Dr. Charles Kamen, MD | LiveNow Longevity',
- description: 'Longevity medicine programs by board-certified neurologist Dr. Charles Kamen, MD in Las Vegas. Biomarker tracking and wellness protocols.',
+ description: 'Longevity medicine protocols by board-certified neurologist Dr. Charles Kamen, MD in Las Vegas. Biomarker tracking and wellness protocols.',
  images: ['/api/og?title=Longevity%20Medicine%20Las%20Vegas&description=Longevity%20medicine%20by%20Dr.%20Charles%20Kamen%2C%20MD.'],
  },
  robots: {
@@ -41,18 +41,18 @@ export const metadata: Metadata = {
 
 const service = {
  title: 'Longevity Medicine',
- heroSubtitle: 'Evidence-based wellness programs with biomarker tracking to support healthy aging.',
- intro: `Longevity medicine focuses on supporting long-term health and wellness through evidence-based interventions, comprehensive biomarker evaluation, and individualized wellness programs.
+ heroSubtitle: 'Evidence-based wellness protocols with biomarker tracking to support healthy aging.',
+ intro: `Longevity medicine focuses on supporting long-term health and wellness through evidence-based interventions, comprehensive biomarker evaluation, and individualized wellness protocols.
 
 Dr. Charles Kamen, MD, a board-certified neurologist by the American Board of Psychiatry and Neurology at LiveNow Longevity in Las Vegas, uses advanced diagnostics and therapeutic protocols to support patients interested in optimizing their long-term health trajectory.
 
-Dr. Kamen takes a comprehensive approach — combining biomarker panels, health evaluation, and evidence-based wellness protocols to support patients interested in healthy aging. Every program begins with medical evaluation to understand your current health status and health goals.
+Dr. Kamen takes a comprehensive approach — combining biomarker panels, health evaluation, and evidence-based wellness protocols to support patients interested in healthy aging. Every protocol begins with medical evaluation to understand your current health status and health goals.
 
 Protocols may include nutritional guidance, lifestyle recommendations, and in some cases therapeutic interventions — all based on individual medical evaluation. Telemedicine consultations are available for Nevada residents.`,
  benefits: [
  'Comprehensive biomarker panels including metabolic, inflammatory, and wellness markers',
  'Optional epigenetic age testing to understand your biological age indicators',
- 'Individualized wellness programs based on your health profile and goals',
+ 'Individualized wellness protocols based on your health profile and goals',
  'Evidence-based combination of nutritional, lifestyle, and therapeutic interventions',
  'Biomarker tracking to monitor your health trajectory over time',
  'Telemedicine available for Nevada residents for ongoing management',
@@ -67,8 +67,8 @@ Protocols may include nutritional guidance, lifestyle recommendations, and in so
  { q: 'Who is a good candidate for longevity medicine?', a: 'Adults interested in comprehensive health evaluation and wellness optimization may be candidates. Most patients are interested in understanding their current health status and identifying ways to support their long-term wellness.' },
  { q: 'What is epigenetic age testing?', a: 'Epigenetic age testing analyzes DNA methylation patterns to estimate biological age indicators. This is an optional add-on that provides additional data about your health trajectory. Individual results vary.' },
  { q: 'How does longevity medicine differ from traditional healthcare?', a: 'Longevity medicine takes a proactive, wellness-focused approach to long-term health rather than waiting for illness to occur. It uses comprehensive diagnostics and individualized protocols to support optimal health over time.' },
- { q: 'How long does it take to see results from a longevity program?', a: 'Results vary by individual and depend on the specific interventions recommended. Some patients notice improvements in energy and wellness within weeks; more significant biomarker changes may take months of consistent participation in the program.' },
- { q: 'What therapies are used in longevity programs?', a: 'Longevity programs may include nutritional guidance, lifestyle recommendations, biomarker monitoring, and in some cases therapeutic interventions — all determined by your individual medical evaluation. All interventions are evidence-based and individualized.' },
+ { q: 'How long does it take to see results from a longevity protocol?', a: 'Results vary by individual and depend on the specific interventions recommended. Some patients notice improvements in energy and wellness within weeks; more significant biomarker changes may take months of consistent participation in the protocol.' },
+ { q: 'What therapies are used in longevity protocols?', a: 'Longevity protocols may include nutritional guidance, lifestyle recommendations, biomarker monitoring, and in some cases therapeutic interventions — all determined by your individual medical evaluation. All interventions are evidence-based and individualized.' },
  ],
  relatedService: { title: 'Regenerative Medicine', href: '/services/regenerative-medicine' },
 };

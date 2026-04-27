@@ -57,7 +57,7 @@ NAD+ therapy is a medical treatment supervised by a licensed physician. Telemedi
  'Support for cognitive clarity, physical energy, and sleep quality in some patients',
  'Support for DNA repair enzyme function and cellular stress responses',
  'Physician monitoring throughout every infusion session',
- 'Can be integrated with peptide therapy, hormone optimization, and wellness programs',
+ 'Can be integrated with peptide therapy, hormone optimization, and wellness protocols',
  'Maintenance protocols using oral NAD+ precursor supplements after loading phase',
  'Available via telemedicine for Nevada residents with physician oversight',
  ],
