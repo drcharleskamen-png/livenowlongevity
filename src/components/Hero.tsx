@@ -1,6 +1,13 @@
 'use client';
+import { useRef } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+  type Variants,
+} from 'framer-motion';
 import styles from './Hero.module.css';
 
 const trustBadges = [
@@ -14,9 +21,9 @@ const featurePillars = [
     title: 'Advanced Testing',
     description: 'Identify the root causes with comprehensive lab testing.',
     icon: (
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" strokeLinecap="round" />
-        <circle cx="12" cy="12" r="3.5" strokeLinecap="round" />
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+        <path d="M9 3v6.5L4.5 18a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L15 9.5V3" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M8 3h8M7 14h10" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -24,8 +31,8 @@ const featurePillars = [
     title: 'Personalized Plans',
     description: 'Treatments tailored to your biology, goals, and lifestyle.',
     icon: (
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <circle cx="12" cy="8" r="4" strokeLinecap="round" />
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+        <circle cx="12" cy="8" r="4" />
         <path d="M4 21v-1a7 7 0 0 1 14 0v1" strokeLinecap="round" />
       </svg>
     ),
@@ -34,7 +41,7 @@ const featurePillars = [
     title: 'Peptide Therapy',
     description: 'May include peptide therapy when medically appropriate.',
     icon: (
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
         <circle cx="6" cy="6" r="2" />
         <circle cx="18" cy="6" r="2" />
         <circle cx="6" cy="18" r="2" />
@@ -48,7 +55,7 @@ const featurePillars = [
     title: 'Optimize & Thrive',
     description: 'Improve energy, performance, recovery, and long-term healthspan.',
     icon: (
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
         <path d="M3 3v18h18" strokeLinecap="round" />
         <path d="M7 14l4-5 4 3 4-7" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M15 5h4v4" strokeLinecap="round" strokeLinejoin="round" />
@@ -57,10 +64,53 @@ const featurePillars = [
   },
 ];
 
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.05,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 110,
+      damping: 18,
+      mass: 0.9,
+    },
+  },
+};
+
+const photoVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.94 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { type: 'spring', stiffness: 90, damping: 22, delay: 0.15 },
+  },
+};
+
+const credentialVariants: Variants = {
+  hidden: { opacity: 0, x: 32 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { type: 'spring', stiffness: 130, damping: 18, delay: 0.5 },
+  },
+};
+
 const BadgeIcon = ({ kind }: { kind: 'doctor' | 'flask' | 'shield' }) => {
   if (kind === 'doctor') {
     return (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
         <circle cx="12" cy="8" r="4" />
         <path d="M5 21v-1a7 7 0 0 1 14 0v1" strokeLinecap="round" />
       </svg>
@@ -68,14 +118,14 @@ const BadgeIcon = ({ kind }: { kind: 'doctor' | 'flask' | 'shield' }) => {
   }
   if (kind === 'flask') {
     return (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
         <path d="M9 3v6.5L4.5 18a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L15 9.5V3" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M8 3h8M7 14h10" strokeLinecap="round" />
       </svg>
     );
   }
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
       <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
@@ -83,32 +133,58 @@ const BadgeIcon = ({ kind }: { kind: 'doctor' | 'flask' | 'shield' }) => {
 };
 
 export default function Hero() {
+  const ref = useRef<HTMLElement>(null);
+  const reduceMotion = useReducedMotion();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  });
+
+  // Subtle parallax — disabled if user prefers reduced motion
+  const dnaY = useTransform(scrollYProgress, [0, 1], reduceMotion ? [0, 0] : [0, -80]);
+  const photoY = useTransform(scrollYProgress, [0, 1], reduceMotion ? [0, 0] : [0, -40]);
+  const glowOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0.3]);
+
   return (
-    <section className={styles.hero}>
-      <div className={styles.dnaArt} aria-hidden="true" />
-      <div className={styles.glow} aria-hidden="true" />
+    <section ref={ref} className={styles.hero}>
+      <motion.div
+        className={styles.dnaArt}
+        style={{ y: dnaY }}
+        aria-hidden="true"
+      />
+      <motion.div
+        className={styles.glow}
+        style={{ opacity: glowOpacity }}
+        aria-hidden="true"
+      />
 
       <div className={styles.inner}>
-        <div className={styles.layout}>
-          <motion.div
-            className={styles.copy}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-          >
-            <h1 className={styles.headline}>
+        <motion.div
+          className={styles.layout}
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+        >
+          <div className={styles.copy}>
+            <motion.div variants={itemVariants} className={styles.eyebrow}>
+              <span className={styles.eyebrowDot} />
+              Physician-Guided Longevity
+            </motion.div>
+
+            <motion.h1 variants={itemVariants} className={styles.headline}>
               Hormone, Peptide &amp; Longevity Optimization{' '}
               <span className={styles.headlineAccent}>in Las Vegas</span>
-            </h1>
+            </motion.h1>
 
-            <p className={styles.subheadline}>
+            <motion.p variants={itemVariants} className={styles.subheadline}>
               Physician-guided care led by Dr. Charles Kamen, board-certified neurologist,
               helping you improve{' '}
               <span className={styles.subAccent}>energy, weight, recovery,</span> and{' '}
               <span className={styles.subAccent}>long-term health</span>.
-            </p>
+            </motion.p>
 
-            <div className={styles.priceBoxes}>
+            <motion.div variants={itemVariants} className={styles.priceBoxes}>
               <div className={styles.priceCard}>
                 <span className={styles.priceLabel}>Start with a</span>
                 <span className={styles.priceLabelStrong}>Physician Evaluation</span>
@@ -139,23 +215,32 @@ export default function Hero() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
 
-            <div className={styles.ctaRow}>
-              <a
+            <motion.div variants={itemVariants} className={styles.ctaRow}>
+              <motion.a
                 href="https://livenowlongevity.clientsecure.me"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`btn-primary ${styles.ctaPrimary}`}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
               >
                 <CalendarIcon /> Book Your Evaluation
-              </a>
-              <a href="/#pricing" className={`btn-outline ${styles.ctaSecondary}`}>
+              </motion.a>
+              <motion.a
+                href="/#pricing"
+                className={`btn-outline ${styles.ctaSecondary}`}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+              >
                 View Programs
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
 
-            <div className={styles.trustRow}>
+            <motion.div variants={itemVariants} className={styles.trustRow}>
               {trustBadges.map((b) => (
                 <div key={b.label} className={styles.trustItem}>
                   <span className={styles.trustIcon}>
@@ -164,28 +249,34 @@ export default function Hero() {
                   <span className={styles.trustLabel}>{b.label}</span>
                 </div>
               ))}
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
 
-          <motion.div
-            className={styles.media}
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, ease: 'easeOut', delay: 0.15 }}
-          >
-            <div className={styles.photoWrap}>
-              <Image
-                src="/dr-kamen.png"
-                alt="Dr. Charles Kamen, MD — board-certified neurologist and founder of LiveNow Longevity in Las Vegas"
-                fill
-                priority
-                sizes="(max-width: 900px) 100vw, 600px"
-                className={styles.photo}
-              />
-              <div className={styles.photoGradient} aria-hidden="true" />
-            </div>
+          <motion.div className={styles.media} style={{ y: photoY }}>
+            <motion.div
+              variants={photoVariants}
+              className={styles.photoFrame}
+            >
+              <div className={styles.photoInner}>
+                <Image
+                  src="/dr-kamen.png"
+                  alt="Dr. Charles Kamen, MD — board-certified neurologist and founder of LiveNow Longevity in Las Vegas"
+                  fill
+                  priority
+                  sizes="(max-width: 900px) 90vw, 520px"
+                  className={styles.photo}
+                />
+              </div>
+              <div className={styles.photoBorder} aria-hidden="true" />
+              <div className={styles.photoCorner} aria-hidden="true" />
+            </motion.div>
 
-            <div className={styles.credentialCard}>
+            <motion.div
+              variants={credentialVariants}
+              className={styles.credentialCard}
+              whileHover={{ y: -3 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            >
               <span className={styles.credentialEyebrow}>Board-Certified</span>
               <span className={styles.credentialTitle}>Neurologist</span>
               <ul className={styles.credentialList}>
@@ -199,19 +290,24 @@ export default function Hero() {
                   <CheckIcon /> Neurodegenerative Disorders
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </motion.div>
-        </div>
+        </motion.div>
 
-        <div className={styles.pillars}>
-          {featurePillars.map((p, i) => (
+        <motion.div
+          className={styles.pillars}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: '-80px' }}
+        >
+          {featurePillars.map((p) => (
             <motion.div
               key={p.title}
+              variants={itemVariants}
               className={styles.pillar}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
+              whileHover={{ y: -4 }}
+              transition={{ type: 'spring', stiffness: 320, damping: 20 }}
             >
               <span className={styles.pillarIcon}>{p.icon}</span>
               <div>
@@ -220,7 +316,7 @@ export default function Hero() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -238,6 +334,7 @@ function CheckIcon() {
       strokeLinecap="round"
       strokeLinejoin="round"
       className={styles.check}
+      aria-hidden="true"
     >
       <path d="M20 6L9 17l-5-5" />
     </svg>
@@ -255,6 +352,7 @@ function CalendarIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
     >
       <rect x="3" y="5" width="18" height="16" rx="2" />
       <path d="M16 3v4M8 3v4M3 10h18" />

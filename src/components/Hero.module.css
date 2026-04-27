@@ -2,7 +2,7 @@
   position: relative;
   background: var(--bg-dark);
   background-image:
-    radial-gradient(ellipse 80% 50% at 70% 0%, rgba(163, 237, 90, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 50% at 75% 0%, rgba(163, 237, 90, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse 60% 40% at 0% 30%, rgba(108, 209, 255, 0.05) 0%, transparent 60%);
   color: var(--text-primary);
   overflow: hidden;
@@ -11,48 +11,32 @@
 
 .dnaArt {
   position: absolute;
-  left: -120px;
-  top: 0;
-  bottom: 0;
-  width: 320px;
+  left: -140px;
+  top: -80px;
+  bottom: -80px;
+  width: 360px;
   pointer-events: none;
-  background-image: url('/dna-vert.svg'), linear-gradient(180deg, transparent, transparent);
+  background-image: url('/dna-vert.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
-  opacity: 0.55;
+  opacity: 0.4;
   filter: drop-shadow(0 0 24px rgba(163, 237, 90, 0.25));
   z-index: 0;
-}
-
-.dnaArt::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      rgba(163, 237, 90, 0.5) 0,
-      rgba(163, 237, 90, 0.5) 2px,
-      transparent 2px,
-      transparent 14px
-    ),
-    radial-gradient(circle at 50% 0%, rgba(108, 209, 255, 0.6), transparent 60%);
-  mix-blend-mode: screen;
-  opacity: 0.18;
-  mask-image: linear-gradient(180deg, transparent 0%, black 15%, black 85%, transparent 100%);
+  will-change: transform;
 }
 
 .glow {
   position: absolute;
-  right: -20%;
+  right: -15%;
   top: -10%;
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
   background: radial-gradient(circle, rgba(163, 237, 90, 0.18) 0%, transparent 60%);
-  filter: blur(60px);
+  filter: blur(80px);
   z-index: 0;
   pointer-events: none;
+  will-change: opacity;
 }
 
 .inner {
@@ -73,12 +57,48 @@
 .copy {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.4rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-accent);
+  padding: 0.45rem 0.9rem;
+  background: var(--primary-accent-soft);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-pill);
+}
+
+.eyebrowDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-accent);
+  box-shadow: 0 0 10px var(--primary-accent-glow);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.85); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eyebrowDot { animation: none; }
 }
 
 .headline {
   font-family: var(--font-montserrat), 'Montserrat', sans-serif;
-  font-size: clamp(2.25rem, 4.6vw, 3.75rem);
+  font-size: clamp(2.25rem, 4.6vw, 3.6rem);
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.015em;
@@ -104,6 +124,7 @@
   font-weight: 600;
 }
 
+/* Pricing boxes */
 .priceBoxes {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
@@ -112,7 +133,7 @@
 }
 
 .priceCard {
-  background: rgba(163, 237, 90, 0.04);
+  background: rgba(15, 24, 18, 0.6);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-md);
   padding: 1.4rem 1.4rem 1.5rem;
@@ -120,6 +141,12 @@
   flex-direction: column;
   gap: 0.35rem;
   position: relative;
+  transition: border-color 0.25s var(--transition), transform 0.25s var(--transition);
+}
+
+.priceCard:hover {
+  border-color: rgba(163, 237, 90, 0.5);
+  transform: translateY(-2px);
 }
 
 .priceLabel {
@@ -183,7 +210,7 @@
   align-items: flex-start;
   gap: 0.5rem;
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.45;
 }
 
@@ -193,6 +220,7 @@
   margin-top: 3px;
 }
 
+/* CTAs */
 .ctaRow {
   display: flex;
   flex-wrap: wrap;
@@ -200,16 +228,14 @@
   margin-top: 0.5rem;
 }
 
-.ctaPrimary {
-  padding: 1rem 1.75rem;
-  font-size: 0.875rem;
-}
-
+.ctaPrimary,
 .ctaSecondary {
   padding: 1rem 1.75rem;
   font-size: 0.875rem;
+  cursor: pointer;
 }
 
+/* Trust signals */
 .trustRow {
   display: flex;
   flex-wrap: wrap;
@@ -228,7 +254,6 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--text-secondary);
-  text-transform: none;
 }
 
 .trustIcon {
@@ -248,39 +273,75 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 540px;
+  min-height: 600px;
+  will-change: transform;
 }
 
-.photoWrap {
+/* Photo frame:
+   The actual photo is 688x1504 (~1:2.18 portrait).
+   We use a 4:5 visible frame and crop tightly via object-position
+   to focus on Dr. Kamen's head and shoulders, which is what the
+   reference design shows. No dark overlay covers the photo. */
+.photoFrame {
   position: relative;
   width: 100%;
-  max-width: 540px;
+  max-width: 520px;
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: linear-gradient(180deg, #0a1410 0%, #050a07 100%);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border-accent);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(163, 237, 90, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.photoInner {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center 30%, #15211a 0%, #050a07 100%);
 }
 
 .photo {
   object-fit: cover;
-  object-position: center top;
+  /* Pull image up to keep face/upper-body in the visible 4:5 crop */
+  object-position: center 12%;
 }
 
-.photoGradient {
+/* Subtle accent border that does NOT cover the photo */
+.photoBorder {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(5, 10, 7, 0.7) 100%);
+  border-radius: var(--radius-lg);
   pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(163, 237, 90, 0.3) 0%, transparent 30%),
+    linear-gradient(0deg, rgba(108, 209, 255, 0.18) 0%, transparent 25%);
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+
+/* Top-right glowing corner accent */
+.photoCorner {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 90px;
+  height: 90px;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, transparent 50%, rgba(163, 237, 90, 0.4) 50%);
+  mask-image: linear-gradient(135deg, transparent 60%, black 65%, black 70%, transparent 75%);
+  -webkit-mask-image: linear-gradient(135deg, transparent 60%, black 65%, black 70%, transparent 75%);
+  border-radius: 0 var(--radius-lg) 0 0;
 }
 
 .credentialCard {
   position: absolute;
-  right: -10px;
-  top: 35%;
-  background: rgba(15, 24, 18, 0.85);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  right: -16px;
+  top: 38%;
+  background: rgba(10, 16, 12, 0.92);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-md);
   padding: 1.1rem 1.25rem;
@@ -288,14 +349,18 @@
   flex-direction: column;
   gap: 0.15rem;
   min-width: 230px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(163, 237, 90, 0.08);
+  cursor: default;
+  will-change: transform;
 }
 
 .credentialEyebrow {
   font-family: var(--font-montserrat), 'Montserrat', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--primary-accent);
 }
@@ -320,6 +385,7 @@
   width: 32px;
   height: 2px;
   background: var(--primary-accent);
+  box-shadow: 0 0 8px var(--primary-accent-glow);
 }
 
 .credentialList {
@@ -356,6 +422,8 @@
   gap: 1rem;
   padding: 1.25rem 1.5rem 1.25rem 0;
   border-right: 1px solid var(--border);
+  cursor: default;
+  will-change: transform;
 }
 
 .pillar:last-child {
@@ -371,6 +439,9 @@
   justify-content: center;
   width: 44px;
   height: 44px;
+  background: var(--primary-accent-soft);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-accent);
 }
 
 .pillarTitle {
@@ -397,9 +468,9 @@
     gap: 2.5rem;
   }
   .media {
-    min-height: 480px;
+    min-height: 540px;
   }
-  .photoWrap {
+  .photoFrame {
     max-width: 460px;
   }
   .pillars {
@@ -431,14 +502,17 @@
     width: 100%;
   }
   .credentialCard {
-    position: relative;
-    right: auto;
-    top: auto;
+    position: static;
     margin: -2rem auto 0;
     width: 90%;
+    max-width: 320px;
   }
-  .photoWrap {
+  .photoFrame {
     aspect-ratio: 3 / 4;
+    max-width: 360px;
+  }
+  .photo {
+    object-position: center 8%;
   }
   .pillars {
     grid-template-columns: 1fr;
