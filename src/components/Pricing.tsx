@@ -199,6 +199,23 @@ export default function Pricing() {
           ))}
         </div>
 
+        <motion.div
+          className={styles.paymentsStrip}
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <span className={styles.paymentsLabel}>We accept</span>
+          <span className={styles.paymentsList}>
+            Visa &nbsp;·&nbsp; Mastercard &nbsp;·&nbsp; Amex &nbsp;·&nbsp; Discover &nbsp;·&nbsp;
+            HSA &nbsp;·&nbsp; FSA &nbsp;·&nbsp; Apple Pay
+          </span>
+          <a href="/payments" className={styles.paymentsLink}>
+            Billing &amp; payment details →
+          </a>
+        </motion.div>
+
         <motion.p
           className={styles.disclaimer}
           initial={{ opacity: 0 }}
