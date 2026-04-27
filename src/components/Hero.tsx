@@ -76,7 +76,7 @@ const containerVariants: Variants = {
 };
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 20 },
   show: {
     opacity: 1,
     y: 0,
@@ -90,11 +90,11 @@ const itemVariants: Variants = {
 };
 
 const photoVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.94 },
+  hidden: { opacity: 0, scale: 1.06 },
   show: {
     opacity: 1,
     scale: 1,
-    transition: { type: 'spring', stiffness: 90, damping: 22, delay: 0.15 },
+    transition: { type: 'spring', stiffness: 70, damping: 22, mass: 1.1 },
   },
 };
 
@@ -103,7 +103,7 @@ const credentialVariants: Variants = {
   show: {
     opacity: 1,
     x: 0,
-    transition: { type: 'spring', stiffness: 130, damping: 18, delay: 0.5 },
+    transition: { type: 'spring', stiffness: 130, damping: 18, delay: 0.55 },
   },
 };
 
@@ -141,166 +141,169 @@ export default function Hero() {
     offset: ['start start', 'end start'],
   });
 
-  // Subtle parallax — disabled if user prefers reduced motion
-  const dnaY = useTransform(scrollYProgress, [0, 1], reduceMotion ? [0, 0] : [0, -80]);
-  const photoY = useTransform(scrollYProgress, [0, 1], reduceMotion ? [0, 0] : [0, -40]);
+  // Subtle scroll-driven parallax + zoom on the photo, all guarded by reduce-motion
+  const photoY = useTransform(scrollYProgress, [0, 1], reduceMotion ? [0, 0] : [0, -60]);
+  const photoScale = useTransform(scrollYProgress, [0, 1], reduceMotion ? [1, 1] : [1, 1.04]);
   const glowOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0.3]);
 
   return (
     <section ref={ref} className={styles.hero}>
-      <motion.div
-        className={styles.dnaArt}
-        style={{ y: dnaY }}
-        aria-hidden="true"
-      />
       <motion.div
         className={styles.glow}
         style={{ opacity: glowOpacity }}
         aria-hidden="true"
       />
 
-      <div className={styles.inner}>
+      {/* LEFT — copy + pricing */}
+      <motion.div
+        className={styles.copy}
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"
+      >
+        <div className={styles.copyInner}>
+          <motion.div variants={itemVariants} className={styles.eyebrow}>
+            <span className={styles.eyebrowDot} />
+            Physician-Guided Longevity
+          </motion.div>
+
+          <motion.h1 variants={itemVariants} className={styles.headline}>
+            Hormone, Peptide &amp; Longevity Optimization{' '}
+            <span className={styles.headlineAccent}>in Las Vegas</span>
+          </motion.h1>
+
+          <motion.p variants={itemVariants} className={styles.subheadline}>
+            Physician-guided care led by Dr. Charles Kamen, board-certified neurologist,
+            helping you improve{' '}
+            <span className={styles.subAccent}>energy, weight, recovery,</span> and{' '}
+            <span className={styles.subAccent}>long-term health</span>.
+          </motion.p>
+
+          <motion.div variants={itemVariants} className={styles.priceBoxes}>
+            <div className={styles.priceCard}>
+              <span className={styles.priceLabel}>Start with a</span>
+              <span className={styles.priceLabelStrong}>Physician Evaluation</span>
+              <div className={styles.priceValue}>
+                <span className={styles.priceAmount}>$89</span>
+              </div>
+              <p className={styles.priceNote}>
+                One-on-one evaluation with Dr. Kamen to review your health and goals.
+              </p>
+            </div>
+
+            <div className={styles.priceCard}>
+              <span className={styles.priceLabel}>Programs starting at</span>
+              <div className={styles.priceValue}>
+                <span className={styles.priceAmount}>$299</span>
+                <span className={styles.pricePeriod}>/month</span>
+              </div>
+              <p className={styles.priceNote}>Includes:</p>
+              <ul className={styles.priceFeatures}>
+                <li>
+                  <CheckIcon /> Physician guidance &amp; support
+                </li>
+                <li>
+                  <CheckIcon /> Personalized plan
+                </li>
+                <li>
+                  <CheckIcon /> Includes peptide therapy when medically appropriate
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className={styles.ctaRow}>
+            <motion.a
+              href="https://livenowlongevity.clientsecure.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`btn-primary ${styles.ctaPrimary}`}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            >
+              <CalendarIcon /> Book Your Evaluation
+            </motion.a>
+            <motion.a
+              href="/#pricing"
+              className={`btn-outline ${styles.ctaSecondary}`}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            >
+              View Programs
+            </motion.a>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className={styles.trustRow}>
+            {trustBadges.map((b) => (
+              <div key={b.label} className={styles.trustItem}>
+                <span className={styles.trustIcon}>
+                  <BadgeIcon kind={b.icon} />
+                </span>
+                <span className={styles.trustLabel}>{b.label}</span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {/* RIGHT — full-bleed photo + floating credential card */}
+      <motion.div
+        className={styles.photoStage}
+        style={{ y: photoY, scale: photoScale }}
+      >
         <motion.div
-          className={styles.layout}
-          variants={containerVariants}
+          className={styles.photoFrame}
+          variants={photoVariants}
           initial="hidden"
           animate="show"
         >
-          <div className={styles.copy}>
-            <motion.div variants={itemVariants} className={styles.eyebrow}>
-              <span className={styles.eyebrowDot} />
-              Physician-Guided Longevity
-            </motion.div>
-
-            <motion.h1 variants={itemVariants} className={styles.headline}>
-              Hormone, Peptide &amp; Longevity Optimization{' '}
-              <span className={styles.headlineAccent}>in Las Vegas</span>
-            </motion.h1>
-
-            <motion.p variants={itemVariants} className={styles.subheadline}>
-              Physician-guided care led by Dr. Charles Kamen, board-certified neurologist,
-              helping you improve{' '}
-              <span className={styles.subAccent}>energy, weight, recovery,</span> and{' '}
-              <span className={styles.subAccent}>long-term health</span>.
-            </motion.p>
-
-            <motion.div variants={itemVariants} className={styles.priceBoxes}>
-              <div className={styles.priceCard}>
-                <span className={styles.priceLabel}>Start with a</span>
-                <span className={styles.priceLabelStrong}>Physician Evaluation</span>
-                <div className={styles.priceValue}>
-                  <span className={styles.priceAmount}>$89</span>
-                </div>
-                <p className={styles.priceNote}>
-                  One-on-one evaluation with Dr. Kamen to review your health and goals.
-                </p>
-              </div>
-
-              <div className={styles.priceCard}>
-                <span className={styles.priceLabel}>Programs starting at</span>
-                <div className={styles.priceValue}>
-                  <span className={styles.priceAmount}>$299</span>
-                  <span className={styles.pricePeriod}>/month</span>
-                </div>
-                <p className={styles.priceNote}>Includes:</p>
-                <ul className={styles.priceFeatures}>
-                  <li>
-                    <CheckIcon /> Physician guidance &amp; support
-                  </li>
-                  <li>
-                    <CheckIcon /> Personalized plan
-                  </li>
-                  <li>
-                    <CheckIcon /> Includes peptide therapy when medically appropriate
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className={styles.ctaRow}>
-              <motion.a
-                href="https://livenowlongevity.clientsecure.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`btn-primary ${styles.ctaPrimary}`}
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.97 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-              >
-                <CalendarIcon /> Book Your Evaluation
-              </motion.a>
-              <motion.a
-                href="/#pricing"
-                className={`btn-outline ${styles.ctaSecondary}`}
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.97 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-              >
-                View Programs
-              </motion.a>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className={styles.trustRow}>
-              {trustBadges.map((b) => (
-                <div key={b.label} className={styles.trustItem}>
-                  <span className={styles.trustIcon}>
-                    <BadgeIcon kind={b.icon} />
-                  </span>
-                  <span className={styles.trustLabel}>{b.label}</span>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-
-          <motion.div className={styles.media} style={{ y: photoY }}>
-            <motion.div
-              variants={photoVariants}
-              className={styles.photoFrame}
-            >
-              <div className={styles.photoInner}>
-                <Image
-                  src="/dr-kamen.png"
-                  alt="Dr. Charles Kamen, MD — board-certified neurologist and founder of LiveNow Longevity in Las Vegas"
-                  fill
-                  priority
-                  sizes="(max-width: 900px) 90vw, 520px"
-                  className={styles.photo}
-                />
-              </div>
-              <div className={styles.photoBorder} aria-hidden="true" />
-              <div className={styles.photoCorner} aria-hidden="true" />
-            </motion.div>
-
-            <motion.div
-              variants={credentialVariants}
-              className={styles.credentialCard}
-              whileHover={{ y: -3 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            >
-              <span className={styles.credentialEyebrow}>Board-Certified</span>
-              <span className={styles.credentialTitle}>Neurologist</span>
-              <ul className={styles.credentialList}>
-                <li>
-                  <CheckIcon /> Stroke
-                </li>
-                <li>
-                  <CheckIcon /> Parkinson&rsquo;s Disease
-                </li>
-                <li>
-                  <CheckIcon /> Neurodegenerative Disorders
-                </li>
-              </ul>
-            </motion.div>
-          </motion.div>
+          <Image
+            src="/dr-kamen.png"
+            alt="Dr. Charles Kamen, MD — board-certified neurologist and founder of LiveNow Longevity in Las Vegas"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className={styles.photo}
+          />
+          <div className={styles.photoBlendLeft} aria-hidden="true" />
+          <div className={styles.photoBlendBottom} aria-hidden="true" />
         </motion.div>
 
         <motion.div
-          className={styles.pillars}
-          variants={containerVariants}
+          className={styles.credentialCard}
+          variants={credentialVariants}
           initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: '-80px' }}
+          animate="show"
+          whileHover={{ y: -4 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
         >
+          <span className={styles.credentialEyebrow}>Board-Certified</span>
+          <span className={styles.credentialTitle}>Neurologist</span>
+          <ul className={styles.credentialList}>
+            <li>
+              <CheckIcon /> Stroke
+            </li>
+            <li>
+              <CheckIcon /> Parkinson&rsquo;s Disease
+            </li>
+            <li>
+              <CheckIcon /> Neurodegenerative Disorders
+            </li>
+          </ul>
+        </motion.div>
+      </motion.div>
+
+      {/* BOTTOM — feature pillars span full width */}
+      <motion.div
+        className={styles.pillars}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: '-80px' }}
+      >
+        <div className={styles.pillarsInner}>
           {featurePillars.map((p) => (
             <motion.div
               key={p.title}
@@ -316,8 +319,8 @@ export default function Hero() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 }
