@@ -4,15 +4,57 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './ClinicSlider.module.css';
 
+/* Story arc: a patient's journey from the door to a personalized
+   protocol — eight beats taking them from arrival to trust. */
 const clinicImages = [
-  '/clinic-photos/IMG_5700 4.jpg',
-  '/clinic-photos/IMG_5702 3.jpg',
-  '/clinic-photos/IMG_5704 4.PNG',
-  '/clinic-photos/IMG_5705 4.jpg',
-  '/clinic-photos/IMG_5707 3.jpg',
-  '/clinic-photos/IMG_5708 3.jpg',
-  '/clinic-photos/IMG_5709 4.PNG',
-  '/clinic-photos/IMG_5710 4.jpg',
+  {
+    src: '/clinic-photos/IMG_5710 4.jpg',
+    chapter: '01',
+    title: 'Welcome to the clinic',
+    caption: 'Dr. Kamen meets every new patient at the door.',
+  },
+  {
+    src: '/clinic-photos/IMG_5704 4.PNG',
+    chapter: '02',
+    title: 'A private space to begin',
+    caption: 'Quiet consultation suite — calm, unhurried, no waiting room chaos.',
+  },
+  {
+    src: '/clinic-photos/IMG_5705 4.jpg',
+    chapter: '03',
+    title: 'Real board certification',
+    caption: 'American Board of Psychiatry & Neurology — Charles Edward Kamen, MD.',
+  },
+  {
+    src: '/clinic-photos/IMG_5707 3.jpg',
+    chapter: '04',
+    title: 'Where your protocol is built',
+    caption: 'Modern workspace with the tools to evaluate your labs in real time.',
+  },
+  {
+    src: '/clinic-photos/IMG_5708 3.jpg',
+    chapter: '05',
+    title: 'A real conversation',
+    caption: 'Comprehensive evaluation — symptoms, history, goals, and bloodwork reviewed together.',
+  },
+  {
+    src: '/clinic-photos/IMG_5709 4.PNG',
+    chapter: '06',
+    title: 'Time to ask every question',
+    caption: 'No five-minute appointments. Dr. Kamen explains the science behind every recommendation.',
+  },
+  {
+    src: '/clinic-photos/IMG_5702 3.jpg',
+    chapter: '07',
+    title: 'Evidence-based protocols',
+    caption: 'Peptide reference at hand — every prescription is grounded in published mechanisms.',
+  },
+  {
+    src: '/clinic-photos/IMG_5700 4.jpg',
+    chapter: '08',
+    title: 'You leave with a plan',
+    caption: 'Personalized longevity protocol — supervised, monitored, adjusted over time.',
+  },
 ];
 
 export default function ClinicSlider() {
@@ -63,17 +105,35 @@ export default function ClinicSlider() {
                   both display fully without crop. The same image is shown again
                   on top with object-fit: contain. */}
               <img
-                src={clinicImages[currentIndex]}
+                src={clinicImages[currentIndex].src}
                 alt=""
                 aria-hidden="true"
                 className={styles.imageBackdrop}
               />
               <img
-                src={clinicImages[currentIndex]}
-                alt={`Clinic photo ${currentIndex + 1}`}
+                src={clinicImages[currentIndex].src}
+                alt={clinicImages[currentIndex].title}
                 className={styles.image}
               />
               <div className={styles.imageOverlay} />
+
+              <motion.div
+                className={styles.caption}
+                key={`cap-${currentIndex}`}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.18, ease: 'easeOut' }}
+              >
+                <span className={styles.captionChapter}>
+                  Ch. {clinicImages[currentIndex].chapter}
+                </span>
+                <h3 className={styles.captionTitle}>
+                  {clinicImages[currentIndex].title}
+                </h3>
+                <p className={styles.captionText}>
+                  {clinicImages[currentIndex].caption}
+                </p>
+              </motion.div>
             </motion.div>
           </AnimatePresence>
 

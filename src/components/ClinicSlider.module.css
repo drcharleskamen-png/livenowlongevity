@@ -122,10 +122,59 @@
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    transparent 55%,
-    rgba(5, 10, 7, 0.55) 100%
+    transparent 40%,
+    rgba(5, 10, 7, 0.7) 85%,
+    rgba(5, 10, 7, 0.92) 100%
   );
   pointer-events: none;
+  z-index: 2;
+}
+
+/* Caption — story chapter, title, body. Sits above the gradient,
+   bottom-left of the slide for editorial weight. */
+.caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25rem 1.5rem 4.5rem;
+  z-index: 3;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 720px;
+}
+
+.captionChapter {
+  display: inline-block;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary-accent);
+  text-shadow: 0 0 12px rgba(163, 237, 90, 0.55);
+}
+
+.captionTitle {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-size: clamp(1.25rem, 2.4vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: -0.005em;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.7);
+  line-height: 1.15;
+}
+
+.captionText {
+  font-size: clamp(0.85rem, 1.2vw, 0.975rem);
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  line-height: 1.5;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+  max-width: 60ch;
 }
 
 /* Nav buttons — accent-bordered, sized for touch on mobile (44px+). */
@@ -294,6 +343,14 @@
   }
 }
 
+/* Tablet caption sizing */
+@media (max-width: 900px) {
+  .caption {
+    padding: 1rem 1.25rem 4rem;
+    gap: 0.3rem;
+  }
+}
+
 /* Mobile — square aspect so tall portrait clinic photos read well. */
 @media (max-width: 540px) {
   .clinicSection {
@@ -330,5 +387,12 @@
     right: 10px;
     font-size: 0.7rem;
     padding: 4px 10px;
+  }
+  .caption {
+    padding: 0.85rem 1rem 3.25rem;
+    max-width: 100%;
+  }
+  .captionChapter {
+    font-size: 0.62rem;
   }
 }
