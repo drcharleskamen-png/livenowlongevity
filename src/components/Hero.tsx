@@ -173,7 +173,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p variants={itemVariants} className={styles.subheadline}>
-            Physician-guided care led by Dr. Charles Kamen, board-certified neurologist,
+            Physician-guided care led by Dr. Charles Kamen, MD, board-certified neurologist,
             helping you improve{' '}
             <span className={styles.subAccent}>energy, weight, recovery,</span> and{' '}
             <span className={styles.subAccent}>long-term health</span>.
