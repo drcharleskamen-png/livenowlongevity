@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="900" viewBox="0 0 320 900" fill="none">
+  <defs>
+    <linearGradient id="strandA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a3ed5a" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#a3ed5a" stop-opacity="0.85"/>
+      <stop offset="80%" stop-color="#6cd1ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#6cd1ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="strandB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6cd1ff" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#6cd1ff" stop-opacity="0.85"/>
+      <stop offset="80%" stop-color="#a3ed5a" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#a3ed5a" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#a3ed5a" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#a3ed5a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Strand A (sine wave) -->
+  <path d="M 90 0
+           C 200 90, 30 180, 130 270
+           S 230 450, 100 540
+           S 30 720, 150 810
+           S 110 900, 110 900"
+        stroke="url(#strandA)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Strand B (mirrored) -->
+  <path d="M 230 0
+           C 120 90, 290 180, 190 270
+           S 90 450, 220 540
+           S 290 720, 170 810
+           S 210 900, 210 900"
+        stroke="url(#strandB)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Rungs (base pairs) — connecting the two strands every ~50 px -->
+  <g stroke="#a3ed5a" stroke-width="1.4" opacity="0.55" stroke-linecap="round">
+    <line x1="100" y1="50"  x2="220" y2="50"/>
+    <line x1="120" y1="100" x2="200" y2="100"/>
+    <line x1="150" y1="150" x2="170" y2="150"/>
+    <line x1="155" y1="200" x2="165" y2="200"/>
+    <line x1="135" y1="250" x2="185" y2="250"/>
+    <line x1="115" y1="300" x2="205" y2="300"/>
+    <line x1="105" y1="350" x2="215" y2="350"/>
+    <line x1="115" y1="400" x2="205" y2="400"/>
+    <line x1="135" y1="450" x2="185" y2="450"/>
+    <line x1="155" y1="500" x2="165" y2="500"/>
+    <line x1="150" y1="550" x2="170" y2="550"/>
+    <line x1="125" y1="600" x2="195" y2="600"/>
+    <line x1="105" y1="650" x2="215" y2="650"/>
+    <line x1="115" y1="700" x2="205" y2="700"/>
+    <line x1="135" y1="750" x2="185" y2="750"/>
+    <line x1="155" y1="800" x2="165" y2="800"/>
+    <line x1="135" y1="850" x2="185" y2="850"/>
+  </g>
+
+  <!-- Bright nodes at strand intersections -->
+  <g>
+    <circle cx="160" cy="100" r="5" fill="url(#node)"/>
+    <circle cx="160" cy="280" r="6" fill="url(#node)"/>
+    <circle cx="160" cy="460" r="5" fill="url(#node)"/>
+    <circle cx="160" cy="640" r="6" fill="url(#node)"/>
+    <circle cx="160" cy="820" r="5" fill="url(#node)"/>
+  </g>
+</svg>

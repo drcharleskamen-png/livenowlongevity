@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import WhyTrust from '@/components/WhyTrust';
 import Process from '@/components/Process';
 import Services from '@/components/Services';
 import FAQ from '@/components/FAQ';
@@ -18,11 +17,10 @@ export default function HomePage() {
       <HomepageFAQSchema />
       <Navbar />
       <Hero />
-      <WhyTrust />
       <Process />
       <Services />
-      <FAQ />
       <Pricing />
+      <FAQ />
       <ClinicSlider />
       <CTASection />
       <Footer />

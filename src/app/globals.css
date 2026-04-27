@@ -1,18 +1,27 @@
 :root {
-  --primary-dark: #003131;
-  --primary-accent: #48c78e;
-  --secondary-accent: #4ecdc4;
-  --bg-dark: #041212;
-  --bg-light: #062018;
+  /* v2 rebrand — physician-guided longevity */
+  --primary-dark: #050a07;
+  --primary-accent: #a3ed5a;
+  --primary-accent-hover: #b6f573;
+  --primary-accent-soft: rgba(163, 237, 90, 0.12);
+  --primary-accent-glow: rgba(163, 237, 90, 0.45);
+  --secondary-accent: #6cd1ff;
+  --bg-dark: #050a07;
+  --bg-darker: #02060a;
+  --bg-light: #0c1410;
+  --bg-card: #0f1812;
   --text-primary: #ffffff;
-  --text-secondary: rgba(255,255,255,0.8);
-  --text-light: #ffffff;
-  --border: rgba(255,255,255,0.1);
-  --border-light: rgba(255,255,255,0.12);
-  --max-width: 1200px;
+  --text-secondary: rgba(255,255,255,0.78);
+  --text-muted: rgba(255,255,255,0.55);
+  --text-light: #050a07;
+  --border: rgba(255,255,255,0.08);
+  --border-light: rgba(255,255,255,0.14);
+  --border-accent: rgba(163, 237, 90, 0.35);
+  --max-width: 1280px;
   --text-width: 900px;
   --radius-sm: 8px;
-  --radius-md: 12px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
   --radius-pill: 50px;
   --transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -33,7 +42,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--text-primary);
-  background: #041212;
+  background: var(--bg-dark);
   font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -68,19 +77,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Buttons */
 .btn-primary {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   background: var(--primary-accent);
-  color: var(--text-light);
+  color: #050a07;
   font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 0.875rem 2rem;
-  border-radius: var(--radius-pill);
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius-sm);
   border: none;
   cursor: pointer;
-  transition: transform 0.2s var(--transition), box-shadow 0.2s var(--transition);
+  transition: transform 0.2s var(--transition), box-shadow 0.2s var(--transition), background 0.2s var(--transition);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -90,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 50%);
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -101,7 +113,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(72, 199, 142, 0.5), 0 0 0 1px rgba(72,199,142,0.2);
+  background: var(--primary-accent-hover);
+  box-shadow: 0 12px 36px var(--primary-accent-glow), 0 0 0 1px rgba(163,237,90,0.3);
 }
 
 .btn-primary:active {
@@ -109,40 +122,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   background: transparent;
-  color: var(--primary-accent);
+  color: #ffffff;
   font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.75rem 1.75rem;
-  border-radius: var(--radius-pill);
-  border: 2px solid var(--primary-accent);
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(255,255,255,0.45);
   cursor: pointer;
   transition: all 0.2s var(--transition);
   position: relative;
   overflow: hidden;
 }
 
-.btn-outline::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--primary-accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s var(--transition);
-  z-index: -1;
-}
-
-.btn-outline:hover::before {
-  transform: scaleX(1);
-}
-
 .btn-outline:hover {
-  color: var(--text-light);
+  border-color: var(--primary-accent);
+  color: var(--primary-accent);
+  background: var(--primary-accent-soft);
 }
 
 /* Section styles */
