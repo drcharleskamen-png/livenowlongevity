@@ -13,7 +13,11 @@
   --text-primary: #ffffff;
   --text-secondary: rgba(255,255,255,0.78);
   --text-muted: rgba(255,255,255,0.55);
-  --text-light: #050a07;
+  /* --text-light is the legacy "white" alias used by hero/CTA/footer
+     headlines. Keep it white. Use --text-on-accent for text drawn on
+     a lime fill (buttons, badges). */
+  --text-light: #ffffff;
+  --text-on-accent: #050a07;
   --border: rgba(255,255,255,0.08);
   --border-light: rgba(255,255,255,0.14);
   --border-accent: rgba(163, 237, 90, 0.35);
