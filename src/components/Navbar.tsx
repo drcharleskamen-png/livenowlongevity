@@ -7,9 +7,9 @@ import styles from './Navbar.module.css';
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Programs', href: '/#pricing' },
   { label: 'How It Works', href: '/#process' },
-  { label: 'Testing', href: '/services/longevity-medicine' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/#faq' },
   { label: 'Contact', href: '/#contact' },
 ];
