@@ -27,7 +27,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className={`section ${styles.process}`}>
+    <section id="process" className={`section ${styles.process}`}>
       <div className="container">
         <motion.div
           className="section-header"
