@@ -6,9 +6,14 @@ import {
   useScroll,
   useTransform,
   useReducedMotion,
+  useMotionValue,
+  useSpring,
   type Variants,
 } from 'framer-motion';
 import styles from './Hero.module.css';
+import WordReveal from './effects/WordReveal';
+import CountUp from './effects/CountUp';
+import MagneticButton from './effects/MagneticButton';
 
 const trustBadges = [
   { label: 'Board-Certified Neurologist', icon: 'doctor' },
@@ -146,8 +151,62 @@ export default function Hero() {
   const photoScale = useTransform(scrollYProgress, [0, 1], reduceMotion ? [1, 1] : [1, 1.04]);
   const glowOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0.3]);
 
+  // ---- Cursor spotlight (background) ----
+  // A large soft glow follows the cursor across the hero, building depth.
+  // Uses springs so motion is buttery instead of pixel-snap.
+  const mouseX = useMotionValue(0.5);
+  const mouseY = useMotionValue(0.2);
+  const sxBg = useSpring(mouseX, { stiffness: 80, damping: 20, mass: 0.5 });
+  const syBg = useSpring(mouseY, { stiffness: 80, damping: 20, mass: 0.5 });
+  const spotlightX = useTransform(sxBg, (v) => `${v * 100}%`);
+  const spotlightY = useTransform(syBg, (v) => `${v * 100}%`);
+
+  // ---- 3D photo tilt ----
+  // Photo tilts a few degrees toward the cursor while in the right column.
+  const tiltX = useMotionValue(0);
+  const tiltY = useMotionValue(0);
+  const stx = useSpring(tiltX, { stiffness: 140, damping: 18 });
+  const sty = useSpring(tiltY, { stiffness: 140, damping: 18 });
+  const rotateX = useTransform(sty, [-1, 1], reduceMotion ? [0, 0] : [4, -4]);
+  const rotateY = useTransform(stx, [-1, 1], reduceMotion ? [0, 0] : [-4, 4]);
+
+  const handleSectionMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    if (reduceMotion) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    mouseX.set((e.clientX - rect.left) / rect.width);
+    mouseY.set((e.clientY - rect.top) / rect.height);
+  };
+
+  const handlePhotoMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (reduceMotion) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    tiltX.set(((e.clientX - rect.left) / rect.width) * 2 - 1);
+    tiltY.set(((e.clientY - rect.top) / rect.height) * 2 - 1);
+  };
+
+  const handlePhotoMouseLeave = () => {
+    tiltX.set(0);
+    tiltY.set(0);
+  };
+
   return (
-    <section ref={ref} className={styles.hero}>
+    <section ref={ref} className={styles.hero} onMouseMove={handleSectionMouseMove}>
+      {/* Cursor-following spotlight — large soft lime/cyan blob behind everything */}
+      <motion.div
+        className={styles.spotlight}
+        style={{
+          background: useTransform(
+            [spotlightX, spotlightY] as never,
+            ([px, py]) =>
+              `radial-gradient(600px circle at ${px} ${py}, rgba(163,237,90,0.18), rgba(108,209,255,0.05) 35%, transparent 70%)`
+          ),
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Aurora drift — slow ambient lime/cyan blob in the negative space */}
+      <div className={styles.aurora} aria-hidden="true" />
+
       <motion.div
         className={styles.glow}
         style={{ opacity: glowOpacity }}
@@ -168,8 +227,17 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1 variants={itemVariants} className={styles.headline}>
-            Hormone, Peptide &amp; Longevity Optimization{' '}
-            <span className={styles.headlineAccent}>in Las Vegas</span>
+            <WordReveal
+              text="Hormone, Peptide & Longevity Optimization"
+              delay={0.2}
+              stagger={0.07}
+            />{' '}
+            <WordReveal
+              text="in Las Vegas"
+              delay={0.65}
+              stagger={0.07}
+              className={styles.headlineAccent}
+            />
           </motion.h1>
 
           <motion.p variants={itemVariants} className={styles.subheadline}>
@@ -184,7 +252,7 @@ export default function Hero() {
               <span className={styles.priceLabel}>Start with a</span>
               <span className={styles.priceLabelStrong}>Physician Evaluation</span>
               <div className={styles.priceValue}>
-                <span className={styles.priceAmount}>$89</span>
+                <CountUp to={89} prefix="$" className={styles.priceAmount} stiffness={70} damping={20} />
               </div>
               <p className={styles.priceNote}>
                 One-on-one evaluation with Dr. Kamen to review your health and goals.
@@ -197,7 +265,7 @@ export default function Hero() {
             <div className={styles.priceCard}>
               <span className={styles.priceLabel}>Protocols starting at</span>
               <div className={styles.priceValue}>
-                <span className={styles.priceAmount}>$299</span>
+                <CountUp to={299} prefix="$" className={styles.priceAmount} stiffness={55} damping={20} />
                 <span className={styles.pricePeriod}>/month</span>
               </div>
               <p className={styles.priceNote}>Includes:</p>
@@ -216,17 +284,16 @@ export default function Hero() {
           </motion.div>
 
           <motion.div variants={itemVariants} className={styles.ctaRow}>
-            <motion.a
+            <MagneticButton
               href="https://livenowlongevity.clientsecure.me"
               target="_blank"
               rel="noopener noreferrer"
-              className={`btn-primary ${styles.ctaPrimary}`}
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+              className={`btn-primary ${styles.ctaPrimary} ${styles.shine}`}
+              strength={14}
+              innerRatio={0.55}
             >
               <CalendarIcon /> Book Your Evaluation
-            </motion.a>
+            </MagneticButton>
             <motion.a
               href="/#pricing"
               className={`btn-outline ${styles.ctaSecondary}`}
@@ -255,12 +322,20 @@ export default function Hero() {
       <motion.div
         className={styles.photoStage}
         style={{ y: photoY, scale: photoScale }}
+        onMouseMove={handlePhotoMouseMove}
+        onMouseLeave={handlePhotoMouseLeave}
       >
         <motion.div
           className={styles.photoFrame}
           variants={photoVariants}
           initial="hidden"
           animate="show"
+          style={{
+            rotateX,
+            rotateY,
+            transformPerspective: 1100,
+            transformStyle: 'preserve-3d',
+          }}
         >
           <div className={styles.photoBackdrop} aria-hidden="true">
             <div className={styles.backdropWatermark}>
