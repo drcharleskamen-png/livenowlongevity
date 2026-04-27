@@ -108,7 +108,7 @@ export default function ClinicSlider() {
         >
           <div className={styles.infoCard}>
             <div className={styles.iconWrapper}>
-              <MapPin size={22} color="#48c78e" />
+              <MapPin size={22} color="#a3ed5a" />
             </div>
             <div className={styles.infoText}>
               <h3 className={styles.infoTitle}>Visit Our Las Vegas Clinic</h3>

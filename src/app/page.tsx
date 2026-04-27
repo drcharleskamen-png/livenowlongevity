@@ -17,11 +17,11 @@ export default function HomePage() {
       <HomepageFAQSchema />
       <Navbar />
       <Hero />
+      <ClinicSlider />
       <Process />
       <Services />
       <Pricing />
       <FAQ />
-      <ClinicSlider />
       <CTASection />
       <Footer />
       <StickyCta />
